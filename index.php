@@ -17,7 +17,7 @@
     <main>
         <!--main content -->
         <div id="hero-container">
-            <img id="hero" src="" alt="">
+            <img id="hero" src="./pictures/nisan_hero.jpg" alt="nissan GT">
         </div>
         <div id="ad-container">
                 <img src="" alt="">
