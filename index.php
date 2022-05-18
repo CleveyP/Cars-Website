@@ -7,16 +7,50 @@
     <title>Best Automotive</title>
 </head>
 <body>
+    <!--header-->
+
     <?php include("header.php"); ?>
+
+    <!--end header-->
+
+
     <main>
+        <!--main content -->
         <div id="hero-container">
             <img id="hero" src="" alt="">
-            
+        </div>
+        <div id="ad-container">
+                <img src="" alt="">
+        </div>
+        <div id="filters-container">
+            <form action="">
+                <label for="mileage">Mileage</label>
+                <input type="range" name="mileage">
+
+                <label for="price">Price</label>
+                <input type="text" name="price">
+
+                <label for="mileage">Make</label>
+                <input type="range" name="make">
+
+                <label for="model">Model</label>
+                <input type="text" name="model">
+
+                <label for="new">New Cars</label>
+                <input type="radio" name="new">
+                <label for="used">Used Cars</label>
+                <input type="radio" name="used">
+
+            </form>
         </div>
 
 
 
     </main>
-    
+
+
+
+    <?php include("footer.php"); ?>    
+
 </body>
 </html>
