@@ -2,14 +2,14 @@
 <style>
 footer{
     display: flex;
-    flex-direction:row;
+    flex-direction: row;
     justify-content: space-around;
-    align-items:center;   
+    align-items: center;   
     background-color: #242424;
     height: 60px;
     width: 100%;
 }
-a{
+footer a{
     color: #5994A4;
     text-decoration: none; 
 }

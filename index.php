@@ -20,7 +20,7 @@
             <img id="hero" src="./pictures/nissan_hero.jpg" alt="nissan GT">
         </div>
         <div id="ad-container">
-                <img src="" alt="">
+                <img src="./pictures/cola_ad.gif" alt="coca cola advertisement">
         </div>
         <div id="filters-container">
             <form action="">
