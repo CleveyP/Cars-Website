@@ -41,18 +41,25 @@ main{
     color: white;
 }
 .grid{
+    padding-top: 50px;
+    padding-left: 50px;
     display: grid;
     border: 3px solid white;
-    height: 500px;
+    height: 600px;
     width: 100%;
-    position: center;
+    gap: 3px;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
 }
 
 .grid-item{
+    color: white;
     margin:0px;
-    height: 100px;
-    width: 100px;
+    height: 250px;
+    width: 250px;
     border: solid white 3px;
+}
+
+.grid-item > img{
+    height: 150px;
 }
