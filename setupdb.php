@@ -34,7 +34,7 @@ $sql = "CREATE TABLE users (
     id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     firstname VARCHAR(30) NOT NULL,
     lastname VARCHAR(30) NOT NULL,
-    h_password VARCHAR(255) NOT NULL, 
+    h_password CHAR(255) NOT NULL, 
     email VARCHAR(50)
     )"; //h_password is user's HASHED password
 if (mysqli_query($conn, $sql)) {
@@ -43,9 +43,9 @@ if (mysqli_query($conn, $sql)) {
     echo "Error creating users table: " . mysqli_error($conn);
   }
 //insert dummy users into the users table
-$hashed = password_hash("1234", PASSWORD_DEFAULT);
-  $sql = "INSERT INTO users (firstname, lastname, email, h_password, email)
-VALUES ('Cleveland', 'Plonsey', " . $hashed . ", 'clevelandplonsey@gmail.com')";
+$hashed = "'" . password_hash("1234", PASSWORD_DEFAULT) . "'";
+  $sql = "INSERT INTO users (firstname, lastname, email, h_password)
+VALUES ('Cleveland', 'Plonsey', 'clevelandplonsey@gmail.com', " . $hashed .  ")";
 
 if (mysqli_query($conn, $sql)) {
   echo "New account created successfully<br>";
@@ -53,9 +53,9 @@ if (mysqli_query($conn, $sql)) {
   echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }
 
-$hashed = password_hash("lounes", PASSWORD_DEFAULT);
-  $sql = "INSERT INTO users (firstname, lastname, email, h_password, email)
-VALUES ('Lounes', 'Allache', " . $hashed . ", 'locolounes@gmail.com')";
+$hashed = "'" . password_hash("lounes", PASSWORD_DEFAULT) . "'";
+  $sql = "INSERT INTO users (firstname, lastname, email, h_password)
+VALUES ('Lounes', 'Allache', 'locolounes@gmail.com', " . $hashed . ")";
 
 if (mysqli_query($conn, $sql)) {
   echo "New account created successfully<br>";
@@ -67,7 +67,7 @@ if (mysqli_query($conn, $sql)) {
 
 //setup products table
 $sql = "CREATE TABLE products (
-  product_id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY_KEY, 
+  product_id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
   product_name VARCHAR(100),
   product_make VARCHAR(50),
   product_model VARCHAR(50),
@@ -83,26 +83,26 @@ $sql = "CREATE TABLE products (
     echo "products table created successfully";
   }
   else{
-    echo "Error: " . $sql . "<br" . mysql_error($conn);
+    echo "Error: " . $sql . "<br" . mysqli_error($conn);
   }
 
   //insert products into products table
   $sql = "INSERT INTO products (product_name, product_make, product_model, product_price, product_mileage, product_stock, product_is_new, product_year, product_color) 
-                    VALUES    ('2013 Honda Accord', 'Honda', 'Accord',        14000,           50432,          1,            'FALSE',        2013,        'gold')";
+                    VALUES    ('2013 Honda Accord', 'Honda', 'Accord', 14000, 50432, 1, FALSE, 2013, 'gold')";
 if(mysqli_query($conn, $sql)){
   echo "inserted 2013 Honda Accord successfully. <br>";
 }
 else{
-  echo "Error: " . $sql . "<br" . mysql_error($conn);
+  echo "Error: " . $sql . "<br" . mysqli_error($conn);
 }
 
 $sql = "INSERT INTO products (product_name, product_make, product_model, product_price, product_mileage, product_stock, product_is_new, product_year, product_color) 
-              VALUES    ('2015 Subaru Forester', 'Subaru', 'Forester',        15000,           45000,          1,            'FALSE',        2015,        'gold')";
+              VALUES    ('2015 Subaru Forester', 'Subaru', 'Forester',        15000,           45000,          1,            FALSE,        2015,        'gold')";
 if(mysqli_query($conn, $sql)){
 echo "inserted 2015 Subaru Forester successfully. <br>";
 }
 else{
-echo "Error: " . $sql . "<br" . mysql_error($conn);
+echo "Error: " . $sql . "<br" . mysqli_error($conn);
 }
 
 mysqli_close($conn);
