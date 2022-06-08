@@ -49,13 +49,13 @@
                 <a href=""><div class="grid-item">
                     <img src="./pictures/2013lexus.jpg" alt="">
                     <p class="car-name">2013 Toyota Lexus</p>
-                    <p class="car-price">$12000.99</p>
+                    <p class="car-price">$12,000.00</p>
                 </div></a>
 
                 <a href=""><div class="grid-item">
                     <img src="./pictures/2015forester.jpg" alt="">
                     <p class="car-name">2015 Suburu Forester</p>
-                    <p class="car-price">$15000.00</p>
+                    <p class="car-price">$15,000.00</p>
                 </div></a>
 
                 <a href=""><div class="grid-item">
@@ -67,19 +67,19 @@
                 <a href=""><div class="grid-item">
                     <img src="./pictures/2013accord.jpg" alt="">
                     <p class="car-name">2013 Honda Accord</p>
-                    <p class="car-price">$14000.00</p>
+                    <p class="car-price">$14,000.00</p>
                 </div></a>
 
                 <a href=""><div class="grid-item">
                     <img src="./pictures/2020civic.jpg" alt="">
                     <p class="car-name">2020 Honda Civic</p>
-                    <p class="car-price">$24000.99</p>
+                    <p class="car-price">$24,000.00</p>
                 </div></a>
 
                 <a href=""><div class="grid-item">
                     <img src="./pictures/nissan_hero.jpg" alt="">
-                    <p class="car-name">2015 Nissan GTR </p>
-                    <p class="car-price">$12000.00</p>
+                    <p class="car-name">2021 Nissan GTR </p>
+                    <p class="car-price">$120,000.00</p>
                 </div></a>
 
 

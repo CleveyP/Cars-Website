@@ -80,7 +80,7 @@ $sql = "CREATE TABLE products (
   )";
 
   if(mysqli_query($conn, $sql)){
-    echo "products table created successfully";
+    echo "products table created successfully<br>";
   }
   else{
     echo "Error: " . $sql . "<br" . mysqli_error($conn);
@@ -97,9 +97,36 @@ else{
 }
 
 $sql = "INSERT INTO products (product_name, product_make, product_model, product_price, product_mileage, product_stock, product_is_new, product_year, product_color) 
-              VALUES    ('2015 Subaru Forester', 'Subaru', 'Forester',        15000,           45000,          1,            FALSE,        2015,        'gold')";
+              VALUES    ('2015 Subaru Forester', 'Subaru', 'Forester',        15000,           45000,          1,            FALSE,        2015,        'white')";
 if(mysqli_query($conn, $sql)){
 echo "inserted 2015 Subaru Forester successfully. <br>";
+}
+else{
+echo "Error: " . $sql . "<br" . mysqli_error($conn);
+}
+
+$sql = "INSERT INTO products (product_name, product_make, product_model, product_price, product_mileage, product_stock, product_is_new, product_year, product_color) 
+              VALUES    ('2013 Toyota Lexus', 'Toyota', 'Lexus',        12000,           60000,          1,            FALSE,        2013,        'navy')";
+if(mysqli_query($conn, $sql)){
+echo "inserted 2013 Toyota Lexus successfully. <br>";
+}
+else{
+echo "Error: " . $sql . "<br" . mysqli_error($conn);
+}
+
+$sql = "INSERT INTO products (product_name, product_make, product_model, product_price, product_mileage, product_stock, product_is_new, product_year, product_color) 
+              VALUES    ('2020 Honda Civic', 'Honda', 'Civic',        24000,           0,          3,            TRUE,        2020,        'gray')";
+if(mysqli_query($conn, $sql)){
+echo "inserted 2020 Honda Civic successfully. <br>";
+}
+else{
+echo "Error: " . $sql . "<br" . mysqli_error($conn);
+}
+
+$sql = "INSERT INTO products (product_name, product_make, product_model, product_price, product_mileage, product_stock, product_is_new, product_year, product_color) 
+              VALUES    ('2021 Nissan GTR', 'Nissan', 'GTR',        120000,           0,          2,            TRUE,        2021,        'gray')";
+if(mysqli_query($conn, $sql)){
+echo "inserted 2021 Nissan GTR successfully. <br>";
 }
 else{
 echo "Error: " . $sql . "<br" . mysqli_error($conn);
