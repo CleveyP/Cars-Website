@@ -27,3 +27,32 @@ header > button{
 }
 /*end css for header.php 1 */
 
+
+/*  filters section for index */
+
+label{
+    color: white;
+}
+
+
+/* end filters section for index */
+
+main{
+    color: white;
+}
+.grid{
+    display: grid;
+    border: 3px solid white;
+    height: 500px;
+    width: 100%;
+    position: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.grid-item{
+    margin:0px;
+    height: 100px;
+    width: 100px;
+    border: solid white 3px;
+}

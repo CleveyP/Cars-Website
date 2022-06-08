@@ -19,9 +19,7 @@
         <div id="hero-container">
             <img id="hero" src="./pictures/nissan_hero.jpg" alt="nissan GT">
         </div>
-        <div id="ad-container">
-                <img src="./pictures/cola_ad.gif" alt="coca cola advertisement">
-        </div>
+    
         <div id="filters-container">
             <form action="">
                 <label for="mileage">Mileage</label>
@@ -43,7 +41,67 @@
 
             </form>
         </div>
+        <div id="products-container">
+            <h2>Offerrings</h2>
+            <div id="car-grid" class="grid">
+                <a href=""><div class="grid-item">
+                    <img src="" alt="">
+                    <p class="car-name">chevrolet Camaro</p>
+                    <p class="car-price"></p>
+                </div></a>
 
+                <a href=""><div class="grid-item">
+                    <img src="" alt="">
+                    <p class="car-name"></p>
+                    <p class="car-price"></p>
+                </div></a>
+
+                <a href=""><div class="grid-item">
+                    <img src="" alt="">
+                    <p class="car-name"></p>
+                    <p class="car-price">$4.99</p>
+                </div></a>
+
+                <a href=""><div class="grid-item">
+                    <img src="" alt="">
+                    <p class="car-name"></p>
+                    <p class="car-price"></p>
+                </div></a>
+
+                <a href=""><div class="grid-item">
+                    <img src="" alt="">
+                    <p class="car-name"></p>
+                    <p class="car-price"></p>
+                </div></a>
+
+                <a href=""><div class="grid-item">
+                    <img src="" alt="">
+                    <p class="car-name"></p>
+                    <p class="car-price"></p>
+                </div></a>
+
+                <a href=""><div class="grid-item">
+                    <img src="" alt="">
+                    <p class="car-name"></p>
+                    <p class="car-price"></p>
+                </div></a>
+
+                <a href=""><div class="grid-item">
+                    <img src="" alt="">
+                    <p class="car-name"></p>
+                    <p class="car-price"></p>
+                </div></a>
+
+                <a href=""><div class="grid-item">
+                    <img src="" alt="">
+                    <p class="car-name"></p>
+                    <p class="car-price"></p>
+                </div></a>
+
+
+            </div>
+
+        </div>
 
 
     </main>
