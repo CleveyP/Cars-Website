@@ -57,6 +57,6 @@
                 <input type="submit">
             </fieldset>
         </form>
-    
+    <?php include("footer.php"); ?>
 </body>
 </html>
