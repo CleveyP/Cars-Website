@@ -7,6 +7,12 @@
     <title>
         Account Confirmation
     </title>
+    <style>
+        h1{
+            color: white;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <?php 
