@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Best Automotive</title>
+    <link href="styles.css" rel="stylesheet">
 </head>
 <body>
     <!--header-->
@@ -17,11 +18,11 @@
     <main>
         <!--main content -->
         <div id="hero-container">
-            <img id="hero" src="./pictures/nissan_hero.jpg" alt="nissan GT">
+            <img id="hero" src="./pictures/GTR.jpg" alt="nissan GT">
         </div>
-    
+        <!--fiters section -->
         <div id="filters-container">
-            <form action="">
+            <form action="index.php" method="POST">
                 <label for="mileage">Mileage</label>
                 <input type="range" name="mileage">
 
@@ -35,55 +36,76 @@
                 <input type="text" name="model">
 
                 <label for="new">New Cars</label>
-                <input type="radio" name="new">
+                <input type="radio" id="new-radio" name="new/used" value="new">
                 <label for="used">Used Cars</label>
-                <input type="radio" name="used">
-
+                <input type="radio" id="used-radio" name="new/used" value="used">
+                <button type="submit">Apply Filters</button> <!--TODO: Implement this filter feature. Either we'll use js or do it on the server side IDK yet -->
+                <button>Reset Filters</button> <!--TODO: implement this button. It should restore the filters to their starting position of clear -->
             </form>
         </div>
+        <!--end filters section -->
+
+        <!--initial products selection -->
         <div id="products-container">
             <h2>Offerrings</h2>
             <div id="car-grid" class="grid">
+
                 <a href=""><div class="grid-item">
-                    <img src="" alt="">
-                    <p class="car-name">chevrolet Camaro</p>
-                    <p class="car-price"></p>
+                    <img src="./pictures/lexus.jpg" alt="">
+                    <p class="car-name">2013 Toyota Lexus</p>
+                    <p class="car-price">$12,000.00</p>
                 </div></a>
 
                 <a href=""><div class="grid-item">
+                    <img src="./pictures/forester.jpg" alt="">
+                    <p class="car-name">2015 Suburu Forester</p>
+                    <p class="car-price">$15,000.00</p>
+                </div></a>
+
+                <a href=""><div class="grid-item">
+                    <img src="./pictures/Silverado.jpg" alt="">
+                    <p class="car-name"> 2016 Chevrolet Silverado</p>
+                    <p class="car-price">$7,000.00</p>
+                </div></a>
+
+                <a href=""><div class="grid-item">
+                    <img src="./pictures/Accord.jpg" alt="">
+                    <p class="car-name">2013 Honda Accord</p>
+                    <p class="car-price">$14,000.00</p>
+                </div></a>
+
+                <a href=""><div class="grid-item">
+                    <img src="./pictures/Civic.jpg" alt="">
+                    <p class="car-name">2020 Honda Civic</p>
+                    <p class="car-price">$24,000.00</p>
+                </div></a>
+
+                <a href=""><div class="grid-item">
+<<<<<<< HEAD
                     <img src="" alt="">
                     <p class="car-name"></p>
                     <p class="car-price"></p>
                 </div></a>
 
-                <a href=""><div class="grid-item">
-                    <img src="" alt="">
-                    <p class="car-name"></p>
-                    <p class="car-price">$4.99</p>
+=======
+                    <img src="./pictures/GTR.jpg" alt="">
+                    <p class="car-name">2021 Nissan GTR </p>
+                    <p class="car-price">$120,000.00</p>
                 </div></a>
 
-                <a href=""><div class="grid-item">
-                    <img src="" alt="">
-                    <p class="car-name"></p>
-                    <p class="car-price"></p>
-                </div></a>
 
-                <a href=""><div class="grid-item">
-                    <img src="" alt="">
-                    <p class="car-name"></p>
-                    <p class="car-price"></p>
-                </div></a>
-
-                <a href=""><div class="grid-item">
-                    <img src="" alt="">
-                    <p class="car-name"></p>
-                    <p class="car-price"></p>
-                </div></a>
-
+>>>>>>> f745f64c3bb927151ef8ef729bbfa69d2de6660f
             </div>
 
         </div>
+      <!-- end initial products selection -->
 
+ <!--make this section like the cars.com site's section with drop down menus instead of links -->
+ <h2 id="popular-searches-header">Popular Searches</h2>
+        <div id="popular-searches">
+            <a href="">Popular New Cars For Sale</a>
+            <a href="">Popular Used Cars For Sale</a>
+        </div>
 
     </main>
 
