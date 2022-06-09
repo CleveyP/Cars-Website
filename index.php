@@ -20,7 +20,7 @@
         <div id="hero-container">
             <img id="hero" src="./pictures/GTR.jpg" alt="nissan GT">
         </div>
-    
+        <!--fiters section -->
         <div id="filters-container">
             <form action="index.php" method="POST">
                 <label for="mileage">Mileage</label>
@@ -43,7 +43,9 @@
                 <button>Reset Filters</button> <!--TODO: implement this button. It should restore the filters to their starting position of clear -->
             </form>
         </div>
+        <!--end filters section -->
 
+        <!--initial products selection -->
         <div id="products-container">
             <h2>Offerrings</h2>
             <div id="car-grid" class="grid">
@@ -88,10 +90,11 @@
             </div>
 
         </div>
+      <!-- end initial products selection -->
+
  <!--make this section like the cars.com site's section with drop down menus instead of links -->
- <h2>Popular Searches</h2>
+ <h2 id="popular-searches-header">Popular Searches</h2>
         <div id="popular-searches">
-            
             <a href="">Popular New Cars For Sale</a>
             <a href="">Popular Used Cars For Sale</a>
         </div>
