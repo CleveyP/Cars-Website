@@ -80,25 +80,6 @@
                     <p class="car-price"></p>
                 </div></a>
 
-                <a href=""><div class="grid-item">
-                    <img src="" alt="">
-                    <p class="car-name"></p>
-                    <p class="car-price"></p>
-                </div></a>
-
-                <a href=""><div class="grid-item">
-                    <img src="" alt="">
-                    <p class="car-name"></p>
-                    <p class="car-price"></p>
-                </div></a>
-
-                <a href=""><div class="grid-item">
-                    <img src="" alt="">
-                    <p class="car-name"></p>
-                    <p class="car-price"></p>
-                </div></a>
-
-
             </div>
 
         </div>

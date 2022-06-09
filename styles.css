@@ -40,6 +40,7 @@ label{
 main{
     color: white;
 }
+
 .grid{
     display: grid;
     border: 3px solid white;
@@ -47,7 +48,7 @@ main{
     width: 100%;
     position: center;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
 }
 
 .grid-item{
