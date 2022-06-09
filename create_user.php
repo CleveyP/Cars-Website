@@ -18,18 +18,24 @@
     <?php 
     
     include("header.php"); 
+
+    //connect to the mysql server
     include("db_settings.php");
     $conn = mysqli_connect($server, $user, $password, $database);
     if(!$conn){
         echo "Error connecting to mysql server.";
     }
 
+    //pull in the user's entered account credentials from the register.php page's form element
     $firstname = "'". $_POST["first-name"] . "'";
     $lastname  = "'" .  $_POST["last-name"] . "'";
     $password  = "'" . $_POST["password"] . "'";
     $email  = "'" . $_POST["email"] . "'";
    
-    $hashed = "'" . password_hash($password, PASSWORD_DEFAULT) . "'"; //hash the password
+    //hash the user's password 
+    $hashed = "'" . password_hash($password, PASSWORD_DEFAULT) . "'"; 
+
+    //insert the new user account into the users table
     $sql = "INSERT INTO users (firstname, lastname, email, h_password)
   VALUES (" . $firstname . "," .  $lastname . "," . $email . ","  . $hashed .  ")";
   if(mysqli_query($conn, $sql)){

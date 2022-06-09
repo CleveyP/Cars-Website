@@ -52,7 +52,7 @@
                 <br>
                 <label for="confirm-password">Confirm Password</label>
                 <br>
-                <input type="password" name= "confirm-password" id="confirm-password" required>
+                <input type="password" name= "confirm-password" id="confirm-password" required> <!--TODO enforce that the confirm pass is the same as the first entered password via js -->
                 <br>
                 <input type="submit">
             </fieldset>
