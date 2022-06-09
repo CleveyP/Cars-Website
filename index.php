@@ -18,11 +18,11 @@
     <main>
         <!--main content -->
         <div id="hero-container">
-            <img id="hero" src="./pictures/nissan_hero.jpg" alt="nissan GT">
+            <img id="hero" src="./pictures/GTR.jpg" alt="nissan GT">
         </div>
     
         <div id="filters-container">
-            <form action="">
+            <form action="index.php" method="POST">
                 <label for="mileage">Mileage</label>
                 <input type="range" name="mileage">
 
@@ -36,10 +36,11 @@
                 <input type="text" name="model">
 
                 <label for="new">New Cars</label>
-                <input type="radio" name="new">
+                <input type="radio" id="new-radio" name="new/used" value="new">
                 <label for="used">Used Cars</label>
-                <input type="radio" name="used">
-
+                <input type="radio" id="used-radio" name="new/used" value="used">
+                <button type="submit">Apply Filters</button> <!--TODO: Implement this filter feature. Either we'll use js or do it on the server side IDK yet -->
+                <button>Reset Filters</button> <!--TODO: implement this button. It should restore the filters to their starting position of clear -->
             </form>
         </div>
 
@@ -48,37 +49,37 @@
             <div id="car-grid" class="grid">
 
                 <a href=""><div class="grid-item">
-                    <img src="./pictures/2013lexus.jpg" alt="">
+                    <img src="./pictures/lexus.jpg" alt="">
                     <p class="car-name">2013 Toyota Lexus</p>
                     <p class="car-price">$12,000.00</p>
                 </div></a>
 
                 <a href=""><div class="grid-item">
-                    <img src="./pictures/2015forester.jpg" alt="">
+                    <img src="./pictures/forester.jpg" alt="">
                     <p class="car-name">2015 Suburu Forester</p>
                     <p class="car-price">$15,000.00</p>
                 </div></a>
 
                 <a href=""><div class="grid-item">
-                    <img src="" alt="">
-                    <p class="car-name"></p>
-                    <p class="car-price"></p>
+                    <img src="./pictures/Silverado.jpg" alt="">
+                    <p class="car-name"> 2016 Chevrolet Silverado</p>
+                    <p class="car-price">$7,000.00</p>
                 </div></a>
 
                 <a href=""><div class="grid-item">
-                    <img src="./pictures/2013accord.jpg" alt="">
+                    <img src="./pictures/Accord.jpg" alt="">
                     <p class="car-name">2013 Honda Accord</p>
                     <p class="car-price">$14,000.00</p>
                 </div></a>
 
                 <a href=""><div class="grid-item">
-                    <img src="./pictures/2020civic.jpg" alt="">
+                    <img src="./pictures/Civic.jpg" alt="">
                     <p class="car-name">2020 Honda Civic</p>
                     <p class="car-price">$24,000.00</p>
                 </div></a>
 
                 <a href=""><div class="grid-item">
-                    <img src="./pictures/nissan_hero.jpg" alt="">
+                    <img src="./pictures/GTR.jpg" alt="">
                     <p class="car-name">2021 Nissan GTR </p>
                     <p class="car-price">$120,000.00</p>
                 </div></a>
@@ -87,7 +88,13 @@
             </div>
 
         </div>
-
+ <!--make this section like the cars.com site's section with drop down menus instead of links -->
+ <h2>Popular Searches</h2>
+        <div id="popular-searches">
+            
+            <a href="">Popular New Cars For Sale</a>
+            <a href="">Popular Used Cars For Sale</a>
+        </div>
 
     </main>
 
