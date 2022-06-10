@@ -5,7 +5,7 @@
 </head>
 <body>
     <header>
-        <h1>Best Automotive</h1>
+        <a href="./index.php"><h1>Best Automotive</h1></a>
         <img id="logo" src="" alt="">
         <form action="search-results.php" method="post">
             <input id="search-bar" type="text" name="search-bar">

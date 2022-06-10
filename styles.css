@@ -11,7 +11,7 @@ body{
 
 /*css for header.php */
 header{
-    height: 60px;
+    height: 125px;
     width: 100%;
     background-color: #013C57;
     color: white;
@@ -25,6 +25,17 @@ header > button{
     color: black;
     height: 40px;
     width: 40px;
+}
+header > a{
+    color: white;
+    text-decoration: none;
+}
+#search-bar{
+    height: 35px;
+    width: 400px;
+}
+#search-button{
+    visibility: hidden;
 }
 /*end css for header.php 1 */
 
