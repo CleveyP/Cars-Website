@@ -53,30 +53,34 @@ label{
 main{
     color: white;
 }
-
+#hero{
+    width: 100%;
+}
+#filters-form{
+    padding-left: 50px;
+}
 .grid{
     padding-top: 50px;
-    padding-left: 50px;
     display: grid;
-    border: 3px solid white;
     height: 600px;
     width: 100%;
     gap: 3px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
 }
-
+#item-link1, #item-link2, #item-link3, #item-link4, #item-link5, #item-link6{
+    display: inline-block;
+    height: 250px;
+    width: 200px;
+    padding-left: 50px;
+}
 .grid-item{
     color: white;
     margin:0px;
-    height: 250px;
-    width: 250px;
 }
-
 .grid-item > img{
     height: 150px;
- }
-
+}
 #popular-searches{
     height: 400px;
     width: 100%;
@@ -86,7 +90,6 @@ main{
     justify-content: space-evenly;
     align-items: center;
 }
-
 /* end css for the index.php */
 
 /*footer section */

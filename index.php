@@ -18,11 +18,11 @@
     <main>
         <!--main content -->
         <div id="hero-container">
-            <img id="hero" src="./pictures/GTR.jpg" alt="nissan GT">
+            <img id="hero" src="./pictures/road.jpg" alt="nissan GT">
         </div>
         <!--fiters section -->
         <div id="filters-container">
-            <form action="index.php" method="POST">
+            <form action="index.php" method="POST" id="filters-form">
                 <label for="mileage">Mileage</label>
                 <input type="range" name="mileage">
 
@@ -50,42 +50,41 @@
             <h2>Offerrings</h2>
             <div id="car-grid" class="grid">
 
-                <a href=""><div class="grid-item">
+                <a href="" id="item-link1" ><div class="grid-item">
                     <img src="./pictures/lexus.jpg" alt="">
                     <p class="car-name">2013 Toyota Lexus</p>
                     <p class="car-price">$12,000.00</p>
                 </div></a>
 
-                <a href=""><div class="grid-item">
+                <a href="" id="item-link2" ><div class="grid-item">
                     <img src="./pictures/forester.jpg" alt="">
                     <p class="car-name">2015 Suburu Forester</p>
                     <p class="car-price">$15,000.00</p>
                 </div></a>
 
-                <a href=""><div class="grid-item">
+                <a href="" id="item-link3"><div class="grid-item">
                     <img src="./pictures/Silverado.jpg" alt="">
                     <p class="car-name"> 2016 Chevrolet Silverado</p>
                     <p class="car-price">$7,000.00</p>
                 </div></a>
 
-                <a href=""><div class="grid-item">
+                <a href="" id="item-link4"><div class="grid-item">
                     <img src="./pictures/Accord.jpg" alt="">
                     <p class="car-name">2013 Honda Accord</p>
                     <p class="car-price">$14,000.00</p>
                 </div></a>
 
-                <a href=""><div class="grid-item">
+                <a href="" id="item-link5"><div class="grid-item">
                     <img src="./pictures/Civic.jpg" alt="">
                     <p class="car-name">2020 Honda Civic</p>
                     <p class="car-price">$24,000.00</p>
                 </div></a>
 
-                <a href=""><div class="grid-item">
+                <a href="" id="item-link6"><div class="grid-item">
                     <img src="./pictures/GTR.jpg" alt="">
                     <p class="car-name">2021 Nissan GTR </p>
                     <p class="car-price">$120,000.00</p>
                 </div></a>
-
 
             </div>
 

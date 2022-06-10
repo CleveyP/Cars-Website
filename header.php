@@ -8,7 +8,7 @@
         <a href="./index.php"><h1>Best Automotive</h1></a>
         <img id="logo" src="" alt="">
         <form action="search-results.php" method="post">
-            <input id="search-bar" type="text" name="search-bar">
+            <input id="search-bar" type="text" name="search-bar" placeholder="Search by Make or Model">
             <button type="submit" id="search-button">Go!</button>
         </form>
         <a href="sell.php"><button id="sell-button">I want to Sell</button></a>
