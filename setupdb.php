@@ -11,7 +11,7 @@ if (!$conn) {
 
 $sql = "DROP DATABASE IF EXISTS automotive"; //if the database exists then we drop it.
 if(mysqli_query($conn, $sql)){
-    echo "database dropped successfully<br>";
+    echo "database dropped successfully<br>"; 
 }
 else{
     echo "error.<br>";
@@ -27,18 +27,18 @@ if (mysqli_query($conn, $sql)) {
 mysqli_close($conn); 
 
 //connect again to the newly created db.
-$conn = mysqli_connect($server, $user, $password, $database);
+$conn = mysqli_connect($server, $user, $password, $database); 
 
 //create the user table
 $sql = "CREATE TABLE users (
-    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    firstname VARCHAR(30) NOT NULL,
-    lastname VARCHAR(30) NOT NULL,
+    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
+    firstname VARCHAR(30) NOT NULL,                  
+    lastname VARCHAR(30) NOT NULL,                  
     h_password CHAR(255) NOT NULL, 
     email VARCHAR(50)
     )"; //h_password is user's HASHED password
 if (mysqli_query($conn, $sql)) {
-    echo "Table users created successfully";
+    echo "Table users created successfully<br>";
   } else {
     echo "Error creating users table: " . mysqli_error($conn);
   }
@@ -70,7 +70,7 @@ $sql = "CREATE TABLE products (
   product_id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
   product_name VARCHAR(100),
   product_make VARCHAR(50),
-  product_model VARCHAR(50),
+  product_model VARCHAR(50), 
   product_price INT(10),
   product_mileage INT(10),
   product_stock INT(10),
