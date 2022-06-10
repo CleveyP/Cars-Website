@@ -81,20 +81,12 @@
                 </div></a>
 
                 <a href=""><div class="grid-item">
-<<<<<<< HEAD
-                    <img src="" alt="">
-                    <p class="car-name"></p>
-                    <p class="car-price"></p>
-                </div></a>
-
-=======
                     <img src="./pictures/GTR.jpg" alt="">
                     <p class="car-name">2021 Nissan GTR </p>
                     <p class="car-price">$120,000.00</p>
                 </div></a>
 
 
->>>>>>> f745f64c3bb927151ef8ef729bbfa69d2de6660f
             </div>
 
         </div>
