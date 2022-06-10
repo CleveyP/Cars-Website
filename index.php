@@ -14,7 +14,6 @@
 
     <!--end header-->
 
-
     <main>
         <!--main content -->
         <div id="hero-container">
@@ -49,58 +48,64 @@
         <div id="products-container">
             <h2>Offerrings</h2>
             <div id="car-grid" class="grid">
+                <a href="" id="item-link1" >
+                    <div class="grid-item">
+                        <img src="./pictures/lexus.jpg" alt="">
+                        <p class="car-name">2013 Toyota Lexus</p>
+                        <p class="car-price">$12,000.00</p>
+                    </div>
+                </a>
 
-                <a href="" id="item-link1" ><div class="grid-item">
-                    <img src="./pictures/lexus.jpg" alt="">
-                    <p class="car-name">2013 Toyota Lexus</p>
-                    <p class="car-price">$12,000.00</p>
-                </div></a>
+                <a href="" id="item-link2" >
+                    <div class="grid-item">
+                        <img src="./pictures/forester.jpg" alt="">
+                        <p class="car-name">2015 Suburu Forester</p>
+                        <p class="car-price">$15,000.00</p>
+                    </div>
+                </a>
 
-                <a href="" id="item-link2" ><div class="grid-item">
-                    <img src="./pictures/forester.jpg" alt="">
-                    <p class="car-name">2015 Suburu Forester</p>
-                    <p class="car-price">$15,000.00</p>
-                </div></a>
+                <a href="" id="item-link3">
+                    <div class="grid-item">
+                        <img src="./pictures/Silverado.jpg" alt="">
+                        <p class="car-name"> 2016 Chevrolet Silverado</p>
+                        <p class="car-price">$7,000.00</p>
+                    </div>
+                </a>
 
-                <a href="" id="item-link3"><div class="grid-item">
-                    <img src="./pictures/Silverado.jpg" alt="">
-                    <p class="car-name"> 2016 Chevrolet Silverado</p>
-                    <p class="car-price">$7,000.00</p>
-                </div></a>
+                <a href="" id="item-link4">
+                    <div class="grid-item">
+                        <img src="./pictures/Accord.jpg" alt="">
+                        <p class="car-name">2013 Honda Accord</p>
+                        <p class="car-price">$14,000.00</p>
+                    </div>
+                </a>
 
-                <a href="" id="item-link4"><div class="grid-item">
-                    <img src="./pictures/Accord.jpg" alt="">
-                    <p class="car-name">2013 Honda Accord</p>
-                    <p class="car-price">$14,000.00</p>
-                </div></a>
+                <a href="" id="item-link5">
+                    <div class="grid-item">
+                        <img src="./pictures/Civic.jpg" alt="">
+                        <p class="car-name">2020 Honda Civic</p>
+                        <p class="car-price">$24,000.00</p>
+                    </div>
+                </a>
 
-                <a href="" id="item-link5"><div class="grid-item">
-                    <img src="./pictures/Civic.jpg" alt="">
-                    <p class="car-name">2020 Honda Civic</p>
-                    <p class="car-price">$24,000.00</p>
-                </div></a>
-
-                <a href="" id="item-link6"><div class="grid-item">
-                    <img src="./pictures/GTR.jpg" alt="">
-                    <p class="car-name">2021 Nissan GTR </p>
-                    <p class="car-price">$120,000.00</p>
-                </div></a>
-
+                <a href="" id="item-link6">
+                    <div class="grid-item">
+                        <img src="./pictures/GTR.jpg" alt="">
+                        <p class="car-name">2021 Nissan GTR </p>
+                        <p class="car-price">$120,000.00</p>
+                    </div>
+                </a>
             </div>
-
         </div>
-      <!-- end initial products selection -->
+        <!-- end initial products selection -->
 
- <!--make this section like the cars.com site's section with drop down menus instead of links -->
- <h2 id="popular-searches-header">Popular Searches</h2>
+        <!--make this section like the cars.com site's section with drop down menus instead of links -->
+        <h2 id="popular-searches-header">Popular Searches</h2>
         <div id="popular-searches">
             <a href="">Popular New Cars For Sale</a>
             <a href="">Popular Used Cars For Sale</a>
         </div>
-
     </main>
-
-
 
     <?php include("footer.php"); ?>    
 

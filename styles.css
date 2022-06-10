@@ -1,4 +1,5 @@
-/* this is the primary css for the whole website. 
+/* 
+*this is the primary css for the whole website. 
 *the color pallete is #013C57 #5994A4 #7DC8D8 #242424
 *ask me if you want to add another color. We could probably use something bright as an accent color 
 */
@@ -9,7 +10,8 @@ body{
     color: white;
 }
 
-/*css for header.php */
+
+/* CSS for header.php */
 header{
     height: 125px;
     width: 100%;
@@ -37,27 +39,25 @@ header > a{
 #search-button{
     visibility: hidden;
 }
-/*end css for header.php 1 */
+/* End css for header.php */
 
 
-/*  filters section for index */
-
+/* Filters section for index */
+#filters-form{
+    padding-left: 50px;
+}
 label{
     color: white;
 }
+/* End filters section for index */
 
 
-/* end filters section for index */
-
-/* css for the index.php */
+/* CSS for the index.php */
 main{
     color: white;
 }
 #hero{
     width: 100%;
-}
-#filters-form{
-    padding-left: 50px;
 }
 .grid{
     padding-top: 50px;
@@ -90,9 +90,10 @@ main{
     justify-content: space-evenly;
     align-items: center;
 }
-/* end css for the index.php */
+/* End css for the index.php */
 
-/*footer section */
+
+/* Footer section */
 footer{
     display: flex;
     flex-direction: row;
@@ -106,5 +107,4 @@ footer a{
     color: #5994A4;
     text-decoration: none; 
 }
-
-/* end footer section */
+/* End footer section */
