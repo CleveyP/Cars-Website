@@ -45,5 +45,8 @@
       echo "Error occurred in setting up the account.<br>";
   }
     include("footer.php"); ?>
+    <form action="index.php" method='POST'>
+    <input type="submit">
+    </form>
 </body>
 </html>

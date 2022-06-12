@@ -14,6 +14,44 @@
 
     <!--end header-->
 
+
+    <!--sign in user-->
+    <?php 
+    session_start();
+    if(isset($_SESSION["email"])){
+
+        $user_email = $_POST["email"];
+        $user_password = $_POST["password"];
+        if($user_email && $user_password){
+            
+            $_SESSION["email"] = $user_email;
+            $_SESSION["password"] = $user_password;
+
+            //connect to db
+            include('db_settings.php');
+            $conn = mysqli_connect($server, $user, $password, $database);
+            if(!$conn){
+                echo "Error connecting to db<br>";
+            }
+            //hash password 
+            $hashed_password =  password_hash($user_password, PASSWORD_DEFAULT);
+            $sql = "SELECT * from users WHERE h_password = hashed_password AND email = user_email";
+            $user_info = mysqli_query($conn, $sql);
+            if($user_info){
+                $user_info = mysqli_fetch_assoc($user_info);
+                $_SESSION["firstname"] = $user_info["firstname"];
+                $_SESSION["lastname"] = $user_info["lastname"];
+                $_SESSION["user_id"] = $user_info["id"];
+                echo "logged in successfully<br>";
+            }
+            else{
+                echo "Error querying server for user info";
+            }
+        }
+    }
+   
+
+    ?>
     <main>
         <!--main content -->
         <div id="hero-container">
