@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Best Automotive</title>
-    <link href="styles.css" rel="stylesheet">
-</head>
+    <link href="../css/styles.css" rel="stylesheet">
+</head> 
 <body>
     <!--header-->
 
@@ -55,7 +55,7 @@
     <main>
         <!--main content -->
         <div id="hero-container">
-            <img id="hero" src="./pictures/road.jpg" alt="nissan GT">
+            <img id="hero" src="../pictures/road.jpg" alt="nissan GT">
         </div>
         <!--fiters section -->
         <div id="filters-container">
@@ -86,51 +86,57 @@
         <div id="products-container">
             <h2>Offerrings</h2>
             <div id="car-grid" class="grid">
-                <a href="" id="item-link1" >
+                <a href="" class="item-link" >
                     <div class="grid-item">
-                        <img src="./pictures/lexus.jpg" alt="">
+                        <img src="../pictures/lexus.jpg" alt="">
                         <p class="car-name">2013 Toyota Lexus</p>
                         <p class="car-price">$12,000.00</p>
+                        <hr>
                     </div>
                 </a>
 
-                <a href="" id="item-link2" >
+                <a href="" class="item-link" >
                     <div class="grid-item">
-                        <img src="./pictures/forester.jpg" alt="">
+                        <img src="../pictures/forester.jpg" alt="">
                         <p class="car-name">2015 Suburu Forester</p>
                         <p class="car-price">$15,000.00</p>
+                        <hr>
                     </div>
                 </a>
 
-                <a href="" id="item-link3">
+                <a href="" class="item-link">
                     <div class="grid-item">
-                        <img src="./pictures/Silverado.jpg" alt="">
+                        <img src="../pictures/Silverado.jpg" alt="">
                         <p class="car-name"> 2016 Chevrolet Silverado</p>
                         <p class="car-price">$7,000.00</p>
+                        <hr>
                     </div>
                 </a>
 
-                <a href="" id="item-link4">
+                <a href="" class="item-link">
                     <div class="grid-item">
-                        <img src="./pictures/Accord.jpg" alt="">
+                        <img src="../pictures/Accord.jpg" alt="">
                         <p class="car-name">2013 Honda Accord</p>
                         <p class="car-price">$14,000.00</p>
+                        <hr>
                     </div>
                 </a>
 
-                <a href="" id="item-link5">
+                <a href="" class="item-link">
                     <div class="grid-item">
-                        <img src="./pictures/Civic.jpg" alt="">
+                        <img src="../pictures/Civic.jpg" alt="">
                         <p class="car-name">2020 Honda Civic</p>
                         <p class="car-price">$24,000.00</p>
+                        <hr>
                     </div>
                 </a>
 
-                <a href="" id="item-link6">
+                <a href="" class="item-link">
                     <div class="grid-item">
-                        <img src="./pictures/GTR.jpg" alt="">
+                        <img src="../pictures/GTR.jpg" alt="">
                         <p class="car-name">2021 Nissan GTR </p>
                         <p class="car-price">$120,000.00</p>
+                        <hr>
                     </div>
                 </a>
             </div>

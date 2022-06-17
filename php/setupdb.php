@@ -141,7 +141,17 @@ else{
 echo "Error: " . $sql . "<br" . mysqli_error($conn);
 }
 
+$sql = "CREATE TABLE cart (
+  user_id INT(5), 
+  product_id INT(100)
+  )";
+
+if(mysqli_query($conn, $sql)){
+  echo "cart table created successfully. <br>";
+}
+else{
+  echo "Error: failed to create a cart table. <br>";
+}
 
 mysqli_close($conn);
 ?> 
-

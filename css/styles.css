@@ -23,7 +23,7 @@ header{
     align-items: center;   
 }
 header > button{
-    background-color: #5994A4 ;
+    background-color: #5994A4;
     color: black;
     height: 40px;
     width: 40px;
@@ -35,6 +35,8 @@ header > a{
 #search-bar{
     height: 35px;
     width: 400px;
+    border-radius: 25px;
+    padding-left: 25px;
 }
 #search-button{
     visibility: hidden;
@@ -68,18 +70,36 @@ main{
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
 }
-#item-link1, #item-link2, #item-link3, #item-link4, #item-link5, #item-link6{
+.item-link{
     display: inline-block;
-    height: 250px;
-    width: 200px;
+    height: 300px;
+    width: 250px;
     padding-left: 50px;
+    text-decoration: none;
 }
 .grid-item{
     color: white;
     margin:0px;
+    max-height: 100%;
+    max-width: 100%;
+    background-color: white;
+    border-radius: 10px;
 }
 .grid-item > img{
     height: 150px;
+    width: 100%;
+}
+.car-name{
+    color: black;
+    margin-left: 10px;
+}
+.car-price{
+    color: black;
+    margin-left:10px;
+    padding-bottom: 5px;
+}
+.grid-item hr{
+    padding-bottom: 10px;
 }
 #popular-searches{
     height: 400px;
