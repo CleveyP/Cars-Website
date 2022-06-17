@@ -86,7 +86,7 @@
         <div id="products-container">
             <h2>Offerrings</h2>
             <div id="car-grid" class="grid">
-                <a href="" class="item-link" >
+                <a href="./product/" target="_blank" class="item-link" >
                     <div class="grid-item">
                         <img src="../pictures/lexus.jpg" alt="">
                         <p class="car-name">2013 Toyota Lexus</p>
@@ -95,7 +95,7 @@
                     </div>
                 </a>
 
-                <a href="" class="item-link" >
+                <a href="./product/" target="_blank" class="item-link" >
                     <div class="grid-item">
                         <img src="../pictures/forester.jpg" alt="">
                         <p class="car-name">2015 Suburu Forester</p>
@@ -104,7 +104,7 @@
                     </div>
                 </a>
 
-                <a href="" class="item-link">
+                <a href="./product/" target="_blank" class="item-link">
                     <div class="grid-item">
                         <img src="../pictures/Silverado.jpg" alt="">
                         <p class="car-name"> 2016 Chevrolet Silverado</p>
@@ -113,7 +113,7 @@
                     </div>
                 </a>
 
-                <a href="" class="item-link">
+                <a href="./product/" target="_blank" class="item-link">
                     <div class="grid-item">
                         <img src="../pictures/Accord.jpg" alt="">
                         <p class="car-name">2013 Honda Accord</p>

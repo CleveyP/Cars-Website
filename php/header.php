@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
     <link href="../css/styles.css" rel="stylesheet">
 </head>
-<body>
-    <header>
+
+<header>
        
         <a href="./index.php"><h1>Best Automotive</h1></a>
         <img id="logo" src="" alt="">
@@ -26,12 +25,10 @@
 
         ?>
        
-    </header>
-</body>
+</header>
 
 <script>
     let logout = () =>{
         //set the session variables to undefined
     }
 </script>
-</html>
