@@ -7,11 +7,11 @@
     <title>Product</title>
 </head>
 <body>
-    <?php include("header.php"); ?>
 
 
+    
 
 
-    <?php include("footer.php"); ?>
+    <?php import("footer.php"); ?>
 </body>
 </html>

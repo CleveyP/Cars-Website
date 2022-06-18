@@ -27,6 +27,7 @@ header > button{
     color: black;
     height: 40px;
     width: 40px;
+    cursor: pointer;
 }
 header > a{
     color: white;
@@ -85,7 +86,6 @@ main{
     background-color: white;
     border-radius: 10px;
 }
-
 .grid-item > img{
     height: 150px;
     width: 100%;
@@ -129,3 +129,63 @@ footer a{
     text-decoration: none; 
 }
 /* End footer section */
+
+/* CSS for Login page */
+.login-container{
+    position: fixed;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 60%;
+    width: 20%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+#login-title{
+    text-align: center;
+    font-size: 50px;
+    margin-top: 70px;
+    color: black;
+}
+.login-content label{
+    margin: 20px 0 5px 0;
+    display: block;
+    font-weight: 600;
+    font-size: 20px;
+    color: grey;
+    margin-left: 12%;
+}
+.login-content input{
+    display: block;
+    height: 30px;
+    width: 75%;
+    border-radius: 3px;
+    border-color: lightgrey;
+    font-weight: 300;
+    margin-left: 12%;
+}
+.button-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#login-button{
+    background-color: #013C57;
+    border-width: thin;
+    margin-top: 30px;
+    height: 50px;
+    width: 77%;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.login-container a{
+    color: lightgrey;
+    text-decoration: none;
+}
+#register-link{
+    padding-top: 40px;
+    text-align: center;
+    color: lightgrey;
+}
