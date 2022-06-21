@@ -40,6 +40,11 @@
   VALUES (" . $firstname . "," .  $lastname . "," . $email . ","  . $hashed .  ")";
   if(mysqli_query($conn, $sql)){
       echo "<h1>Okay, $firstname. Your account has been set up successfully!</h1> <br>";
+      $_SESSION["isLoggedIn"] = TRUE;
+      $_SESSION['email'] = $email;
+      $_SESSION['password'] = $hashed;
+      $_SESSION['firstname'] = $firstname;
+      $_SESSION['lastname'] = $lastname;
   }
   else{
       echo "Error occurred in setting up the account.<br>";

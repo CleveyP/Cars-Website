@@ -15,10 +15,14 @@
         <a href="cart.php"><button id="cart">Checkout</button></a>
 
         <?php 
-        if(isset($_SESSION["email"])){
-            echo " <a href='profile.php'><button id='profile'>Profile</button></a>
-            <button onclick='logout()'>Logout</button>";
-        }
+        session_start();
+
+        if(isset($_SESSION["isLoggedIn"]) && $_SESSION["isLoggedIn"] == TRUE){
+                $firstname = $_SESSION['firstname'];
+                trim($firstname, "'");
+                echo " <h3 id='username'>" . $firstname . "</h3><a href='profile.php'><button id='profile'>Profile</button></a>
+                <button onclick='logout()'>Logout</button>";
+            }
         else{
             echo "<a href='login.php'><button id='register-button'>Log In</button></a>";
         }

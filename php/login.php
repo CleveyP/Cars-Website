@@ -12,7 +12,7 @@
 
     <div class="login-container">
 
-        <form action="index.php" method="POST" id="login-form">
+        <form action="get_user_info.php" method="POST" id="login-form">
             <div class="login-title-section"> 
                 <h2 id="login-title">Login</h2>
             </div>
@@ -29,8 +29,8 @@
                 <button type="submit" id="login-button">Login</button>
             </div>
         </form>
-            <p id="register-link">Don't have an account? <a href="register.php">Register</a></p>
+        <a href="register.php"><p id="register-link">Don't have an account?  Register here</a></p>
     </div>
-    
+    <?php include("footer.php"); ?>
 </body>
 </html>
