@@ -146,24 +146,22 @@ footer a{
     color: #013C57;
 }
 .login-content label{
-    margin: 20px 0 5px 0;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    margin-left: 12%;
     display: block;
-    font-size: 20px;
     font-size: 14px;
     color: #013C57;
-    margin-left: 12%;
 }
 .login-content input{
+    margin-left: 12%;
     display: block;
     height: 40px;
     width: 75%;
-    border-radius: 3px;
     border-color: lightgrey;
-    font-weight: 300;
-    margin-left: 12%;
     border-radius: 5px;
 }
-.button-section {
+.login-submit{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -190,6 +188,61 @@ footer a{
     color: #013C57;
 }
 .login-footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+/* Log In page ends */
+
+/* Register Page */
+.register-container{
+    position: fixed;
+    top: 53%;
+    left: 46%;
+    transform: translate(-50%, -50%);
+    height: 70%;
+    width: 30%;
+    background-color: white;
+    border-radius: 10px;
+}
+#register-title{
+    text-align: center;
+    font-size: 40px;
+    color: #013C57;
+}
+.register-content label{
+    margin-top: 20px;
+    margin-bottom: 5px;
+    margin-left: 12%;
+    display: block;
+    font-size: 14px; 
+    color: #013C57;
+}
+.register-content input{
+    margin-left: 12%;
+    display: block;
+    height: 40px;
+    width: 75%;
+    border-color: lightgrey;
+    border-radius: 5px;
+}
+.register-submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.register-submit button{
+    background-color: #013C57;
+    border-width: thin;
+    margin-top: 30px;
+    height: 50px;
+    width: 77%;
+    color: white;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+.register-footer{
     position: absolute;
     bottom: 0;
     width: 100%;
