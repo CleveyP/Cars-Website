@@ -13,9 +13,7 @@
     <div class="login-container">
 
         <form action="get_user_info.php" method="POST" id="login-form">
-            <div class="login-title-section"> 
-                <h2 id="login-title">Login</h2>
-            </div>
+            <h2 id="login-title">Log In</h2>
 
             <div class="login-content">
                 <label for="email">Email</label>
@@ -26,11 +24,19 @@
             </div>
                
             <div class="button-section">
-                <button type="submit" id="login-button">Login</button>
+                <button type="submit" id="login-button">Log In</button>
             </div>
         </form>
-        <a href="register.php"><p id="register-link">Don't have an account?  Register here</a></p>
+
+        <div class="register-link">
+            <p>or</p>
+            <p>Don't have an account? <a href="register.php"> Register here</a></p>
+        </div>
+        
     </div>
-    <?php include("footer.php"); ?>
+
+    <div class="login-footer">
+        <?php include("footer.php"); ?>
+    </div>
 </body>
 </html>
