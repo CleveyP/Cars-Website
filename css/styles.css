@@ -58,10 +58,19 @@ label{
 main{
     color: white;
 }
-#hero{
+#index-picture{
     width: 100%;
 }
-.grid{
+.filters-container{
+    /* TODO */
+}
+#products-title{
+    text-align: center;
+    padding-top: 10px;
+    font-size: 50px;
+    color: white;
+}
+.car-grid{
     padding-top: 50px;
     display: grid;
     height: 600px;
@@ -83,7 +92,6 @@ main{
     max-height: 100%;
     max-width: 100%;
     background-color: white;
-    border-radius: 10px;
 }
 .grid-item > img{
     height: 150px;

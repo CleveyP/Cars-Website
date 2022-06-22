@@ -16,9 +16,8 @@
 
     <main>
         <!--main content -->
-        <div id="hero-container">
-            <img id="hero" src="../pictures/road.jpg" alt="nissan GT">
-        </div>
+        <img id="index-picture" src="../pictures/road.jpg" alt="nissan GT">
+
         <!--fiters section -->
         <div id="filters-container">
             <form action="index.php" method="POST" id="filters-form">
@@ -46,8 +45,9 @@
 
         <!--initial products selection -->
         <div id="products-container">
-            <h2>Offerrings</h2>
-            <div id="car-grid" class="grid">
+            <h2 id="products-title">Offerrings</h2>
+            
+            <div class="car-grid">
                 <a href="./product/" target="_blank" class="item-link" >
                     <div class="grid-item">
                         <img src="../pictures/lexus.jpg" alt="">
