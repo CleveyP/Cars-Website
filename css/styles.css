@@ -32,6 +32,9 @@ header > a{
     color: white;
     text-decoration: none;
 }
+header > a:hover{
+    color: lightgrey;
+}
 #search-bar{
     height: 35px;
     width: 400px;
