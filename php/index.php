@@ -48,30 +48,30 @@
             <h2 id="products-title">Offerrings</h2>
             
             <div class="car-grid">
-                <a href="./product/" target="_blank" class="item-link" >
+                <a href="#" target="_blank" class="item-link" >
                     <div class="grid-item">
                         <img src="../pictures/lexus.jpg" alt="">
                         <p class="car-name">2013 Toyota Lexus</p>
+                        <p class="car-miles">40k Miles</p>
                         <p class="car-price">$12,000.00</p>
-                        <hr>
                     </div>
                 </a>
 
-                <a href="./product/" target="_blank" class="item-link" >
+                <a href="#" target="_blank" class="item-link" >
                     <div class="grid-item">
                         <img src="../pictures/forester.jpg" alt="">
-                        <p class="car-name">2015 Suburu Forester</p>
                         <p class="car-price">$15,000.00</p>
-                        <hr>
+                        <p class="car-miles">40k Miles</p>
+                        <p class="car-name">2015 Suburu Forester</p>
                     </div>
                 </a>
 
-                <a href="./product/" target="_blank" class="item-link">
+                <a href="#" target="_blank" class="item-link">
                     <div class="grid-item">
                         <img src="../pictures/Silverado.jpg" alt="">
                         <p class="car-name"> 2016 Chevrolet Silverado</p>
                         <p class="car-price">$7,000.00</p>
-                        <hr>
+                        <p class="car-miles">40k Miles</p>
                     </div>
                 </a>
 
@@ -79,8 +79,8 @@
                     <div class="grid-item">
                         <img src="../pictures/Accord.jpg" alt="">
                         <p class="car-name">2013 Honda Accord</p>
+                        <p class="car-miles">40k Miles</p>
                         <p class="car-price">$14,000.00</p>
-                        <hr>
                     </div>
                 </a>
 
@@ -88,8 +88,8 @@
                     <div class="grid-item">
                         <img src="../pictures/Civic.jpg" alt="">
                         <p class="car-name">2020 Honda Civic</p>
+                        <p class="car-miles">40k Miles</p>
                         <p class="car-price">$24,000.00</p>
-                        <hr>
                     </div>
                 </a>
 
@@ -97,8 +97,8 @@
                     <div class="grid-item">
                         <img src="../pictures/GTR.jpg" alt="">
                         <p class="car-name">2021 Nissan GTR </p>
+                        <p class="car-miles">40k Miles</p>
                         <p class="car-price">$120,000.00</p>
-                        <hr>
                     </div>
                 </a>
             </div>
