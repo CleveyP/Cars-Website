@@ -20,8 +20,8 @@
 
         if(isset($_SESSION["isLoggedIn"]) && $_SESSION["isLoggedIn"] == TRUE){
                 $firstname = $_SESSION['firstname'];
-                trim($firstname, "'");
-                echo " <h3 id='username'>" . $firstname . "</h3><a href='profile.php'><button id='profile'>Profile</button></a>
+                $firstname = trim($firstname, "'");
+                echo " <h3 id='username'>" . $firstname . "</h3><a href='profile.php' id='profile-link'><i class='fa-solid fa-user'></i></a>
                 <button onclick='logout()'>Logout</button>";
             }
         else{
