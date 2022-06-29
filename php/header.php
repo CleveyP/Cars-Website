@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <head>
     <link href="../css/styles.css" rel="stylesheet">
+    <?php include("fontawesome.php"); ?>
 </head>
 
 <header>
@@ -12,7 +13,7 @@
             <!-- <button type="submit" id="search-button">Go!</button> -->
         </form>
         <a href="sell.php"><button id="sell-button">I want to Sell</button></a>
-        <a href="cart.php"><button id="cart">Checkout</button></a>
+        <a href="cart.php" id="cart-link"><i class="fa-solid fa-cart-shopping"></i></a>
 
         <?php 
         session_start();
