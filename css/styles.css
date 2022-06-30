@@ -162,10 +162,7 @@ footer a{
 
 /* CSS for Login page */
 .login-container{
-    position: relative;
-    /* top: 50%;
-    left: 46%;
-    transform: translate(-50%, -50%); */
+    position: relative; 
     height: fit-content;
     margin: auto;
     margin-top: 7%;
@@ -222,20 +219,16 @@ footer a{
     font-weight: bold;
     color: #013C57;
 }
-.login-footer{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
 /* Log In page ends */
 
 /* Register Page */
 .register-container{
-    position: fixed;
-    top: 53%;
-    left: 46%;
-    transform: translate(-50%, -50%);
-    height: 70%;
+    position: relative;
+    height: fit-content;
+    margin: auto;
+    margin-top: 3%;
+    padding-top: 3px;
+    padding-bottom: 50px;
     width: 30%;
     background-color: white;
     border-radius: 10px;
@@ -276,11 +269,6 @@ footer a{
     border-radius: 5px;
     font-size: 18px;
     cursor: pointer;
-}
-.register-footer{
-    position: fixed;
-    bottom: 0;
-    width: 100%;
 }
 
 /* css for Cart.php */

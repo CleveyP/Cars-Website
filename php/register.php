@@ -36,10 +36,6 @@
                 <button type="submit">Register</button>
             </div>
         </form>
-    </div>
-
-    <div class="register-footer">
-        <?php include("footer.php"); ?>
-    </div>
+    </div> 
 </body>
 </html>

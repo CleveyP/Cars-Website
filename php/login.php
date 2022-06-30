@@ -35,8 +35,8 @@
         
     </div>
 
-    <div class="login-footer">
+    <!-- <div class="login-footer">
         <?php include("footer.php"); ?>
-    </div>
+    </div> -->
 </body>
 </html>
