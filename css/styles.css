@@ -222,6 +222,12 @@ footer a{
 /* Log In page ends */
 
 /* Register Page */
+#register-logo{
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-size: 30px;
+}
 .register-container{
     position: relative;
     height: fit-content;
