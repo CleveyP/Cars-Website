@@ -8,7 +8,9 @@
     <title>Login Page</title>
 </head>
 <body>
-    <?php include("header.php"); ?>
+    <header class="form-header">
+        <a href="./index.php">Best Automotive</a>
+    </header>
 
     <div class="login-container">
 
@@ -33,10 +35,6 @@
             <p>Don't have an account? <a href="register.php"> Register here</a></p>
         </div>
         
-    </div>
-
-    <!-- <div class="login-footer">
-        <?php include("footer.php"); ?>
-    </div> -->
+    </div> 
 </body>
 </html>

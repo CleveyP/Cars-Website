@@ -8,8 +8,10 @@
     <title>Register</title>
 </head>
 <body>
-
-    <a href="./index.php" id="register-logo"><h1>Best Automotive</h1></a>
+    
+    <header class="form-header">
+        <a href="./index.php">Best Automotive</a>
+    </header>
     
     <div class="register-container">
         <form id="registration-form" action="create_user.php" method="POST">

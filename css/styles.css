@@ -47,8 +47,19 @@ header > a:hover{
 /* End css for header.php */
 
 
+.form-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 50px;
+    background-color: #242424;
+}
 
-
+.form-header a{
+    color: white;
+    text-decoration: none;
+}
 
 /* CSS for the index.php */
 main{
@@ -165,7 +176,6 @@ footer a{
     position: relative; 
     height: fit-content;
     margin: auto;
-    margin-top: 7%;
     padding-top: 3px;
     padding-bottom: 10px;
     width: 20%;
@@ -222,17 +232,10 @@ footer a{
 /* Log In page ends */
 
 /* Register Page */
-#register-logo{
-    color: white;
-    text-decoration: none;
-    text-align: center;
-    font-size: 30px;
-}
 .register-container{
     position: relative;
     height: fit-content;
     margin: auto;
-    margin-top: 3%;
     padding-top: 3px;
     padding-bottom: 50px;
     width: 30%;
