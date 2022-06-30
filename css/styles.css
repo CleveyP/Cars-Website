@@ -219,6 +219,9 @@ footer a{
     font-size: 18px;
     cursor: pointer;
 }
+#login-button:hover{
+    background-color: #00344e;
+}
 .register-link{
     padding-top: 15px;
     text-align: center;
@@ -278,6 +281,9 @@ footer a{
     border-radius: 5px;
     font-size: 18px;
     cursor: pointer;
+}
+#register-button:hover{
+    background-color: #00344e;
 }
 
 /* css for Cart.php */

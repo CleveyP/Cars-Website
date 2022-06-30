@@ -36,7 +36,7 @@
             </div>
             
             <div class="register-submit">
-                <button type="submit">Register</button>
+                <button type="submit" id="register-button">Register</button>
             </div>
         </form>
     </div> 
