@@ -162,11 +162,15 @@ footer a{
 
 /* CSS for Login page */
 .login-container{
-    position: fixed;
-    top: 50%;
+    position: relative;
+    /* top: 50%;
     left: 46%;
-    transform: translate(-50%, -50%);
-    height: 50%;
+    transform: translate(-50%, -50%); */
+    height: fit-content;
+    margin: auto;
+    margin-top: 7%;
+    padding-top: 3px;
+    padding-bottom: 10px;
     width: 20%;
     background-color: white;
     border-radius: 10px;
@@ -274,7 +278,7 @@ footer a{
     cursor: pointer;
 }
 .register-footer{
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
 }
