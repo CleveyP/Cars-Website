@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <link href="../css/styles.css" rel="stylesheet">
     <title>Register</title>
+    <!-- javascript -->
+    <script src="../js/javascript.js" defer></script>
 </head>
 <body>
     
@@ -34,9 +36,8 @@
                 <label for="confirm-password">Confirm Password</label>
                 <input type="password" name= "confirm-password" id="confirm-password" placeholder="Confirm Password" required> <!--TODO enforce that the confirm pass is the same as the first entered password via js -->
             </div>
-            
             <div class="register-submit">
-                <button type="submit" id="register-button">Register</button>
+                <button type="submit"  id="register-button">Register</button>
             </div>
         </form>
     </div> 
