@@ -49,6 +49,15 @@
   else{
       echo "Error occurred in setting up the account.<br>";
   }
+    $sql = "SELECT id FROM users WHERE firstname =" . $firstname . "AND email =" . $email;
+    $result = mysqli_query($conn, $sql);
+    if($result) {
+        $id = mysqli_fetch_assoc($result);
+        $_SESSION['user_id'] = $id['id'];
+    } 
+    else {
+        echo "Error getting user id from user table";
+    }
     include("footer.php"); ?>
     <form action="index.php" method='POST'>
     <input type="submit">
