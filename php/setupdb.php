@@ -133,6 +133,38 @@ if (mysqli_query($conn, $sql)) {
   echo "Error: " . $sql . "<br" . mysqli_error($conn);
 }
 
+$sql = "INSERT INTO products (product_name, product_make, product_model, product_price, product_mileage, product_stock, product_is_new, product_year, product_color) 
+              VALUES    ('2014 Kia Forte', 'Kia',           'Forte',       10850,           102280,          1,            FALSE,        2014,        'navy')";
+if (mysqli_query($conn, $sql)) {
+  echo "inserted 2014 Kia Forte successfully. <br>";
+} else {
+  echo "Error: " . $sql . "<br" . mysqli_error($conn);
+}
+
+$sql = "INSERT INTO products (product_name, product_make, product_model, product_price, product_mileage, product_stock, product_is_new, product_year, product_color) 
+              VALUES    ('2019 Lamborghini Huracan', 'Lamborghuni', 'Huracan',     326000,    00000,       1,           FALSE,          2019,        'green')";
+if (mysqli_query($conn, $sql)) {
+  echo "inserted 2019 Lambarghini Huracan successfully. <br>";
+} else {
+  echo "Error: " . $sql . "<br" . mysqli_error($conn);
+}
+
+$sql = "INSERT INTO products (product_name, product_make, product_model, product_price, product_mileage, product_stock, product_is_new, product_year, product_color) 
+              VALUES    ('2011 Volkswagen Jetta', 'Volkswagen', 'Jetta',        12888,           70000,          1,            FALSE,        2011,        'white')";
+if (mysqli_query($conn, $sql)) {
+  echo "inserted 2011 Volkswagen Jetta successfully. <br>";
+} else {
+  echo "Error: " . $sql . "<br" . mysqli_error($conn);
+}
+
+$sql = "INSERT INTO products (product_name, product_make, product_model, product_price, product_mileage, product_stock, product_is_new, product_year, product_color) 
+              VALUES    ('2022 Toyota Tacoma', 'Toyota', 'Tacoma',        27000,           00000,          1,            TRUE,        2022,        'blue')";
+if (mysqli_query($conn, $sql)) {
+  echo "inserted 2022 Toyota Tacoma successfully. <br>";
+} else {
+  echo "Error: " . $sql . "<br" . mysqli_error($conn);
+}
+
 $sql = "CREATE TABLE cart (
   user_id INT(6), 
   product_id INT(100)
