@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Best Automotive</title>
     <link href="../css/styles.css" rel="stylesheet">
-</head> 
+</head>
+
 <body>
     <!--header-->
 
@@ -37,8 +39,10 @@
                 <input type="radio" id="new-radio" name="new/used" value="new">
                 <label for="used">Used Cars</label>
                 <input type="radio" id="used-radio" name="new/used" value="used">
-                <button type="submit">Apply Filters</button> <!--TODO: Implement this filter feature. Either we'll use js or do it on the server side IDK yet -->
-                <button>Reset Filters</button> <!--TODO: implement this button. It should restore the filters to their starting position of clear -->
+                <button type="submit">Apply Filters</button>
+                <!--TODO: Implement this filter feature. Either we'll use js or do it on the server side IDK yet -->
+                <button>Reset Filters</button>
+                <!--TODO: implement this button. It should restore the filters to their starting position of clear -->
             </form>
         </div>
         <!--end filters section -->
@@ -46,9 +50,9 @@
         <!--initial products selection -->
         <div id="products-container">
             <h2 id="products-title">Offerrings</h2>
-            
+
             <div class="car-grid">
-                <a href="#" target="_blank" class="item-link" >
+                <a href="./product.php?id=3" target="_blank" class="item-link">
                     <div class="grid-item">
                         <img src="../pictures/lexus.jpg" alt="">
                         <p class="car-name">2013 Toyota Lexus</p>
@@ -57,7 +61,7 @@
                     </div>
                 </a>
 
-                <a href="#" target="_blank" class="item-link" >
+                <a href="./product.php?id=2" target="_blank" class="item-link">
                     <div class="grid-item">
                         <img src="../pictures/forester.jpg" alt="">
                         <p class="car-price">$15,000.00</p>
@@ -66,7 +70,7 @@
                     </div>
                 </a>
 
-                <a href="#" target="_blank" class="item-link">
+                <a href="./product.php?id=6" target="_blank" class="item-link">
                     <div class="grid-item">
                         <img src="../pictures/Silverado.jpg" alt="">
                         <p class="car-name"> 2016 Chevrolet Silverado</p>
@@ -75,7 +79,7 @@
                     </div>
                 </a>
 
-                <a href="./product/" target="_blank" class="item-link">
+                <a href="./product.php?id=1" target="_blank" class="item-link">
                     <div class="grid-item">
                         <img src="../pictures/Accord.jpg" alt="">
                         <p class="car-name">2013 Honda Accord</p>
@@ -84,7 +88,7 @@
                     </div>
                 </a>
 
-                <a href="" class="item-link">
+                <a href="./product.php?id=4" class="item-link">
                     <div class="grid-item">
                         <img src="../pictures/Civic.jpg" alt="">
                         <p class="car-name">2020 Honda Civic</p>
@@ -93,7 +97,7 @@
                     </div>
                 </a>
 
-                <a href="" class="item-link">
+                <a href="./product.php?id=5" class="item-link">
                     <div class="grid-item">
                         <img src="../pictures/GTR.jpg" alt="">
                         <p class="car-name">2021 Nissan GTR </p>
@@ -113,7 +117,8 @@
         </div>
     </main>
 
-    <?php include("footer.php"); ?>    
+    <?php include("footer.php"); ?>
 
 </body>
+
 </html>

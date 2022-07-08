@@ -208,7 +208,8 @@ footer a{
     justify-content: center;
     align-items: center;
 }
-#login-button{
+
+#login-button, #logout-button{
     background-color: #013C57;
     border-width: thin;
     margin-top: 30px;
@@ -222,6 +223,7 @@ footer a{
 #login-button:hover{
     background-color: #00344e;
 }
+
 .register-link{
     padding-top: 15px;
     text-align: center;
@@ -298,6 +300,19 @@ p.product-specs-p{
     text-align: center;
 }
 
+product-page-img{
+    height: 300px;
+}
+
+#product-name{
+    color: white;
+    font-size: larger;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#product-page-body{
+    background-color: #013C57;
+}
 
 
 

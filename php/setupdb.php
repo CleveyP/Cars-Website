@@ -128,7 +128,7 @@ if (mysqli_query($conn, $sql)) {
 $sql = "INSERT INTO products (product_name, product_make, product_model, product_price, product_mileage, product_stock, product_is_new, product_year, product_color) 
               VALUES    ('2016 Chevrolet Silverado', 'Chevrolet', 'Silverado',        43000,           32000,          1,            FALSE,        2016,        'white')";
 if (mysqli_query($conn, $sql)) {
-  echo "inserted 2021 Nissan GTR successfully. <br>";
+  echo "inserted 2016 Chevrolet Silverado successfully. <br>";
 } else {
   echo "Error: " . $sql . "<br" . mysqli_error($conn);
 }

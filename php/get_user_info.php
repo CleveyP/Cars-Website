@@ -25,7 +25,7 @@ if ($user_info) {
     $_SESSION['email'] = $user_info["email"];
     $_SESSION['password'] = $user_info["h_password"];
     //. automatically redirect back to index.php
-    header("./index.php");
+    header("./index.php"); //TODO FIX THIS-- it should navigate back to the home page when it hits this line.
     exit();
 } else {
     header("login.php");

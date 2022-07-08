@@ -25,7 +25,7 @@
         $firstname = $_SESSION['firstname'];
         $firstname = trim($firstname, "'");
         echo " <h3 id='username'>" . $firstname . "</h3><a href='profile.php' id='profile-link'><i class='fa-solid fa-user'></i></a>
-                <form method='post' action='logout.php'><button type='submit'>Logout</button></form>";
+                <form method='post' action='logout.php'><button type='submit' id='logout-button'>Logout</button></form>";
     } else {
         echo "<a href='login.php'><button id='register-button'>Log In</button></a>";
     }

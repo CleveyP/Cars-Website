@@ -8,7 +8,7 @@
     <title>Product</title>
 </head>
 
-<body>
+<body id="product-page-body">
     <?php include("header.php"); ?>
 
     <?php
@@ -28,7 +28,7 @@
             $product_info = mysqli_fetch_assoc($result);
 
             //picture of car
-            echo "<img src='../pictures/" . $product_info['product_model'] . ".jpg' alt='picture of car'/><br><br>";
+            echo "<img class='product-page-img' src='../pictures/" . $product_info['product_model'] . ".jpg' alt='picture of car'/><br><br>";
             //name of car 
             echo "<h2 id = 'product-name'>" . $product_info['product_name'] . "</h2><br><br>";
             //car specs
@@ -36,7 +36,7 @@
 
 
             //START section for all the product specs
-            echo "<section id='product-specs-container>";
+            echo "<section id='product-specs-container'>";
             echo "<p class='product-specs-p' id='product-price'> Price: " . $product_info['product_price'] . "</p><br>";
 
             echo "<p class='product-specs-p'> year: " . $product_info['product_year'] . "</p><br>";
