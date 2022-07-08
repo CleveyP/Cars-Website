@@ -9,29 +9,34 @@ let displayValidStatus = () =>{
     let message = document.createTextNode("Passwords Match");
     status.appendChild(message);
     pass2.insertAdjacentElement("afterend", status);
-    let pass1Value = document.getElementById("password").value;
-    let pass2Value = document.getElementById("confirm-password").value;
-    if(pass1Value != pass2Value){
-        status.style.color = "red";
-    }
-    else{
-        status.style.color = "green";
-    }
+   
 }
 
 let hideValidStatus = () =>{
     let pass = document.getElementById("password-status");
-    if(pass != undefined){ //could be wrong
+    if(pass != undefined){
         pass.remove();
     }
 }
 
-
+let colorStatus = () =>{
+    let status = document.getElementById("password-status");
+    if(status != undefined){
+        let pass1Value = document.getElementById("password").value;
+        let pass2Value = document.getElementById("confirm-password").value;
+        if(pass1Value != pass2Value){
+            status.style.color = "red";
+        }
+        else{
+            status.style.color = "green";
+        }
+}
+}
 
 
 pass2.addEventListener("focusin", displayValidStatus);
 pass2.addEventListener("focusout", hideValidStatus);
-pass2.addEventListener("input", displayValidStatus);
+pass2.addEventListener("input", colorStatus);
 
 //check if password and confirm password fields match
 registerForm.addEventListener("submit", function(e){

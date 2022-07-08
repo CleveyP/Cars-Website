@@ -286,7 +286,19 @@ footer a{
     background-color: #00344e;
 }
 
-/* css for Cart.php */
+/* START css for Cart.php */
 
 
 /* END css for Cart.php */
+
+/* START css for product.php */
+p.product-specs-p{
+    color:white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+
+
+
+/* END css for product.php */

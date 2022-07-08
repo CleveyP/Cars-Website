@@ -22,9 +22,9 @@
 
     $sql = "SELECT * FROM products WHERE product_id =" . $productID;
 
-    $product_info = mysqli_query($conn, $sql);
-    if($product_info){ //if the 
-        $product_info = mysqli_get_assoc($product_info);
+    $result = mysqli_query($conn, $sql);
+    if($result){ 
+        $product_info = mysqli_fetch_assoc($result);
     
     //picture of car
     echo "<img src='../pictures/" . $product_info['product_model'] . ".jpg' alt='picture of car'/><br><br>";
