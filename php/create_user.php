@@ -59,9 +59,6 @@
         echo "Error getting user id from user table";
     }
     include("footer.php"); ?>
-    <form action="index.php" method='POST'>
-        <input type="submit">
-    </form>
 </body>
 
 </html>
