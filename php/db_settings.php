@@ -1,6 +1,6 @@
 <!--include this file in all files that connect to the mysql database-->
 
-<?php 
+<?php
 
 $server = 'localhost';
 $database = 'automotive';

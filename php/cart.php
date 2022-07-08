@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,11 +9,11 @@
 </head>
 
 <body>
-<?php include("header.php"); ?>
+    <?php include("header.php"); ?>
 
-<?php 
+    <?php
     //check if they are logged in
-    if(isset($_SESSION["isLoggedIn"]) && $_SESSION["isLoggedIn"] == TRUE){ 
+    if (isset($_SESSION["isLoggedIn"]) && $_SESSION["isLoggedIn"] == TRUE) {
         $firstname = $_SESSION['firstname'];
         $firstname = trim($firstname, "'");
         echo "<h1>" . $firstname . "'s Cart</h1><br>";
@@ -22,7 +23,7 @@
         $conn = mysqli_connect($server, $user, $password, $database);
 
         //check if connection to to MySql server is good
-        if($conn){
+        if ($conn) {
             //create query
             $id = $_SESSION['user_id'];
             $id = trim($id, "'"); //might need to trim " as well as '
@@ -30,8 +31,8 @@
 
             //launch query
             $result = mysqli_query($conn, $sql);
-            if($result){
-                while($row = mysqli_fetch_assoc($result)) {
+            if ($result) {
+                while ($row = mysqli_fetch_assoc($result)) {
                     $sql = "SELECT * FROM products WHERE" . $row[0] . " = product_id";
                     $product_values = mysqli_query($conn, $sql);
                     if ($product_values) {
@@ -40,36 +41,33 @@
                         $is_new = $values['product_is_new'] ? "new" : "used";
                         echo "<h2 class='product-name-h2'>" . $is_new . " " . $values['product_name'] . "</h2><br>";
                         echo "<img src='#' alt='TODO'>";
-                        echo 
-                            "<div class='specs-container'>
+                        echo
+                        "<div class='specs-container'>
                                 <p class='product-spec>" . $values['product-make'] . "</p><br>
                                 <p class='product-spec>" . $values['product-model'] . "</p><br>
                                 <p class='product-spec class='product-price'>" . $values['product-price'] . "</p><br>
                                 <p class='product-spec>" . $values['product-mileage'] . "</p><br>
                                 <p class='product-spec>" . $values['product-color'] . "</p><br>
                             </div>";
-                    } 
-                    else {
+                    } else {
                         echo "Error Parsing Product Row <br>";
                     }
                 }
-            }
-            else{
+            } else {
                 echo "problem querying database for user's cart<br>";
             }
-        }
-        else{
+        } else {
             echo "error connecting to SQL server. <br>";
         }
-    }
-    else{
+    } else {
         echo "<h1> Guest's Cart</h1><br>";
         echo "<a href='login.php'> Log in here to see your previous cart items!</a>";
     }
 
 
-?>
+    ?>
 
-<?php include("footer.php"); ?>
+    <?php include("footer.php"); ?>
 </body>
+
 </html>

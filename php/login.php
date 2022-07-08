@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <link href="../css/styles.css" rel="stylesheet">
     <title>Login Page</title>
 </head>
+
 <body>
     <header class="form-header">
         <a href="./index.php">Best Automotive</a>
@@ -24,7 +26,7 @@
                 <label for="password">Password</label>
                 <input type="password" name="password" placeholder="Enter Password" required>
             </div>
-               
+
             <div class="login-submit">
                 <button type="submit" id="login-button">Log In</button>
             </div>
@@ -34,7 +36,8 @@
             <p>or</p>
             <p>Don't have an account? <a href="register.php"> Register here</a></p>
         </div>
-        
-    </div> 
+
+    </div>
 </body>
+
 </html>
