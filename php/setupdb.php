@@ -134,7 +134,7 @@ if (mysqli_query($conn, $sql)) {
 }
 
 $sql = "CREATE TABLE cart (
-  user_id INT(6)  PRIMARY KEY, 
+  user_id INT(6), 
   product_id INT(100)
   )";
 

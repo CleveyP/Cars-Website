@@ -209,7 +209,7 @@ footer a{
     align-items: center;
 }
 
-#login-button, #logout-button{
+ #login-button, #logout-button{ /* TODO fix logout-button */
     background-color: #013C57;
     border-width: thin;
     margin-top: 30px;
@@ -300,7 +300,7 @@ p.product-specs-p{
     text-align: center;
 }
 
-product-page-img{
+#product-page-img{
     height: 300px;
 }
 
@@ -311,7 +311,7 @@ product-page-img{
 }
 
 #product-page-body{
-    background-color: #013C57;
+    background-color: #242424;
 }
 
 

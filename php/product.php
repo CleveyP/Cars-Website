@@ -45,7 +45,7 @@
 
             echo "<p class='product-specs-p'> Color: " . $product_info['product_color'] . "</p><br>";
 
-            echo "<button id='add-to-cart-button'>Add to Cart</button><br><br>";
+            echo "<form action='add_product_to_cart.php' method='post'><button name='add-to-cart-button' value='" . $productID . "' id='add-to-cart-button' type='submit'>Add to Cart</button></form><br><br>";
             echo "</section>";
             //END products specs section
 
