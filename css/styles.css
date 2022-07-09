@@ -68,7 +68,42 @@ main{
 #index-picture{
     width: 100%;
 }
-
+.carousel{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 100%;
+    position: relative;
+}
+.slide{
+    width: 100%;
+    position: absolute;
+    transition: all 0.5s;
+    display: flex;
+    justify-content: space-evenly;
+}
+.chevron{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    border: none;
+    border-radius: 8%;
+    z-index: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    font-size: 18px;
+}
+.chevron:active{
+    transform: scale(1.1);
+}
+#left-chevron{
+    top: 45%;
+    left: 2%;
+}
+#right-chevron{
+    top: 45%;
+    right: 2%;
+}
 #products-title{
     text-align: center;
     padding-top: 10px;
