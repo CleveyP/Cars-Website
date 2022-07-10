@@ -166,7 +166,7 @@ if (mysqli_query($conn, $sql)) {
 }
 
 $sql = "CREATE TABLE cart (
-  user_id INT(6), 
+  users_id INT(6), 
   product_id INT(100)
   )";
 
@@ -176,7 +176,7 @@ if (mysqli_query($conn, $sql)) {
   echo "Error: failed to create a cart table. <br>";
 }
 
-$sql = "INSERT INTO cart (user_id, product_id) VALUES (1, 1)";
+$sql = "INSERT INTO cart (users_id, product_id) VALUES (1, 1)";
 if (mysqli_query($conn, $sql)) {
   echo "inserted a honda accord into Cleveland cart. <br>";
 } else {

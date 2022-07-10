@@ -27,13 +27,13 @@
             //create query
             $id = $_SESSION['user_id'];
             $id = trim($id, "'"); //might need to trim " as well as '
-            $sql = "SELECT product_id FROM cart WHERE" . $id . " = user_id";
+            $sql = "SELECT product_id FROM cart WHERE " . $id . " = users_id";
 
             //launch query
             $result = mysqli_query($conn, $sql);
             if ($result) {
                 while ($row = mysqli_fetch_assoc($result)) {
-                    $sql = "SELECT * FROM products WHERE" . $row[0] . " = product_id";
+                    $sql = "SELECT * FROM products WHERE " . $row['product_id'] . " = product_id";
                     $product_values = mysqli_query($conn, $sql);
                     if ($product_values) {
                         $values = mysqli_fetch_assoc($product_values);
@@ -43,18 +43,18 @@
                         echo "<img src='#' alt='TODO'>";
                         echo
                         "<div class='specs-container'>
-                                <p class='product-spec>" . $values['product-make'] . "</p><br>
-                                <p class='product-spec>" . $values['product-model'] . "</p><br>
-                                <p class='product-spec class='product-price'>" . $values['product-price'] . "</p><br>
-                                <p class='product-spec>" . $values['product-mileage'] . "</p><br>
-                                <p class='product-spec>" . $values['product-color'] . "</p><br>
+                                <p class='product-spec>" . $values['product_make'] . "</p><br>
+                                <p class='product-spec>" . $values['product_model'] . "</p><br>
+                                <p class='product-spec class='product-price'>" . $values['product_price'] . "</p><br>
+                                <p class='product-spec>" . $values['product_mileage'] . "</p><br>
+                                <p class='product-spec>" . $values['product_color'] . "</p><br>
                             </div>";
                     } else {
                         echo "Error Parsing Product Row <br>";
                     }
                 }
             } else {
-                echo "problem querying database for user's cart<br>";
+                echo "Error: " . $sql . "<br>" . mysqli_error($conn);
             }
         } else {
             echo "error connecting to SQL server. <br>";

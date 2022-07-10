@@ -8,7 +8,7 @@ if (isset($_SESSION["isLoggedIn"]) && $_SESSION["isLoggedIn"] == TRUE) {
 
     $conn = mysqli_connect($server, $user, $password, $database);
     if ($conn) { //if conection is good
-        $sql = "INSERT INTO cart (user_id, product_id) VALUES (" . $userID . "," .  $productID . ")";
+        $sql = "INSERT INTO cart (users_id, product_id) VALUES (" . $userID . "," .  $productID . ")";
 
         if (mysqli_query($conn, $sql)) {
             //navigate user back to the product.php page

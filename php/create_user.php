@@ -50,6 +50,7 @@
     } else {
         echo "Error occurred in setting up the account.<br>";
     }
+    //get user id and store it in the session variable
     $sql = "SELECT id FROM users WHERE firstname =" . $firstname . "AND email =" . $email;
     $result = mysqli_query($conn, $sql);
     if ($result) {
