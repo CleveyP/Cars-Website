@@ -40,14 +40,21 @@
                         // (product_name, product_make, product_model, product_price, product_mileage, product_stock, product_is_new, product_year, product_color) 
                         $is_new = $values['product_is_new'] ? "new" : "used";
                         echo "<h2 class='product-name-h2'>" . $is_new . " " . $values['product_name'] . "</h2><br>";
-                        echo "<img src='#' alt='TODO'>";
+                        echo "<img src='#' alt='TODO'>"; //Below, print out all product specs and then add a remove button that POSTS the product to remove through a input value
                         echo
                         "<div class='specs-container'>
-                                <p class='product-spec>" . $values['product_make'] . "</p><br>
-                                <p class='product-spec>" . $values['product_model'] . "</p><br>
-                                <p class='product-spec class='product-price'>" . $values['product_price'] . "</p><br>
-                                <p class='product-spec>" . $values['product_mileage'] . "</p><br>
-                                <p class='product-spec>" . $values['product_color'] . "</p><br>
+                                <p class='product-spec'>Make: " . $values['product_make'] . "</p><br>
+                                <p class='product-spec'>Model: " . $values['product_model'] . "</p><br>
+                                <p class='product-spec' class='product-price'>Price: $" . $values['product_price'] . "</p><br>
+                                <p class='product-spec'>Mileage: " . $values['product_mileage'] . "</p><br>
+                                <p class='product-spec'>Color: " . $values['product_color'] . "</p><br>
+
+
+                                <form method='post' action='remove_cart_item.php'>
+                                <button class='remove-cart-item-button'>X</button>
+                                <input type='text' name='item-to-remove' value='" . $values['product_id'] . "'/>
+                                </form>
+
                             </div>";
                     } else {
                         echo "Error Parsing Product Row <br>";

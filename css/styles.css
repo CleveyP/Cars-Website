@@ -352,3 +352,24 @@ p.product-specs-p{
 
 
 /* END css for product.php */
+
+
+/* START css for cart.php */
+
+
+.specs-container{
+    width: max-content;
+    background-color:#707070;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.product-spec{
+color: white;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+/* END css for cart.php */
