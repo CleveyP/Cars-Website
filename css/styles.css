@@ -323,8 +323,14 @@ footer a{
     background-color: #00344e;
 }
 
-/* START css for Cart.php */
+#password-status{
+    margin-left: 12%; 
+}
 
+/* START css for Cart.php */
+.invisible {
+    visibility: hidden;
+}
 
 /* END css for Cart.php */
 

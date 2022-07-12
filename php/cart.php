@@ -51,8 +51,8 @@
 
 
                                 <form method='post' action='remove_cart_item.php'>
-                                <button class='remove-cart-item-button'>X</button>
-                                <input type='text' name='item-to-remove' value='" . $values['product_id'] . "'/>
+                                <button type='submit' class='remove-cart-item-button'>X</button>
+                                <input class = 'invisible' type='text' name='item-to-remove' value='" . $values['product_id'] . "'/>
                                 </form>
 
                             </div>";
