@@ -16,7 +16,7 @@
     if (isset($_SESSION["isLoggedIn"]) && $_SESSION["isLoggedIn"] == TRUE) {
         $firstname = $_SESSION['firstname'];
         $firstname = trim($firstname, "'");
-        echo "<h1>" . $firstname . "'s Cart</h1><br>";
+        echo "<h1 id='cart-title'>" . $firstname . "'s Cart</h1><br>";
 
         //connect to database
         include("db_settings.php");
@@ -38,30 +38,32 @@
                     if ($product_values) {
                         $values = mysqli_fetch_assoc($product_values);
                         // (product_name, product_make, product_model, product_price, product_mileage, product_stock, product_is_new, product_year, product_color) 
-                        $is_new = $values['product_is_new'] ? "new" : "used";
-                        echo "<h2 class='product-name-h2'>" . $is_new . " " . $values['product_name'] . "</h2><br>";
-                        echo "<img src='#' alt='TODO'>"; //Below, print out all product specs and then add a remove button that POSTS the product to remove through a input value
+                        $is_new = $values['product_is_new'] ? "New" : "Used";
                         echo
-                        "<div class='specs-container'>
-                                <p class='product-spec'>Make: " . $values['product_make'] . "</p><br>
-                                <p class='product-spec'>Model: " . $values['product_model'] . "</p><br>
-                                <p class='product-spec' class='product-price'>Price: $" . $values['product_price'] . "</p><br>
-                                <p class='product-spec'>Mileage: " . $values['product_mileage'] . "</p><br>
-                                <p class='product-spec'>Color: " . $values['product_color'] . "</p><br>
+                            "<div class='product-container'>
+                                <img class='cart-product-img' src='../pictures/" . $values['product_model'] . ".jpg' alt='picture of car'/>
 
+                                <div class='specs-container'>
+                                    <p class='cart-product-name'>" . $is_new . " " . $values['product_name'] . "</p>
 
-                                <form method='post' action='remove_cart_item.php'>
-                                <button type='submit' class='remove-cart-item-button'>X</button>
-                                <input class = 'invisible' type='text' name='item-to-remove' value='" . $values['product_id'] . "'/>
-                                </form>
+                                    <div class='price-mileage'>
+                                        <h2 class='product-spec' class='product-price'>$" . $values['product_price'] . "</h2>
+                                        <h2 class='product-spec'>" . $values['product_mileage'] . " miles</h2>
+                                    </div>
 
+                                    <form method='post' action='remove_cart_item.php'>
+                                        <button type='submit' class='remove-cart-item-button'>X</button>
+                                        <input class = 'invisible' type='text' name='item-to-remove' value='" . $values['product_id'] . "'/>
+                                    </form>
+                                </div>
+                                <p class='cart-show-details'>Show Details</p>
                             </div>";
                     } else {
                         echo "Error Parsing Product Row <br>";
                     }
                 }
             } else {
-                echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                echo "<h3>Cart is Empty<h3>";
             }
         } else {
             echo "error connecting to SQL server. <br>";

@@ -325,11 +325,87 @@ footer a{
 
 #password-status{
     margin-left: 12%; 
+    margin-top: 10px;
 }
 
 /* START css for Cart.php */
 .invisible {
     visibility: hidden;
+}
+
+#cart-title{
+    color: white;
+    text-align: center;
+}
+
+.cart-product-name{
+    color: white;
+    margin-left: 6%;
+    font-size: 1.5em;
+}
+
+.cart-product-img{
+    width: 300px;
+    border: solid thin black;
+}
+
+.product-container{
+    display: flex;
+}
+
+.product-container{
+    display: flex;
+    flex-direction: row;
+    width: max-content;
+    background-color:#5994A4;
+    margin-top: 30px;
+    padding: 20px;
+}
+
+.specs-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 500px;
+}
+
+.price-mileage{
+    display: flex;
+    flex-direction: row;
+}
+
+.product-spec{
+color: white;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.product-container .product-spec{
+    padding-right: 100px;
+}
+
+.product-container form{
+    position: relative;
+    right: -65%;
+    top: -90%;
+}
+
+.remove-cart-item-button{
+    height: 35px;
+    width: 35px;
+    position: relative;
+    color: white;
+    background-color:#013C57;
+    cursor: pointer;
+}
+.remove-cart-item-button:hover{
+    background-color: #00344e;
+}
+
+.cart-show-details{
+    position: relative;
+    color: white;
+    margin-top: 200px;
 }
 
 /* END css for Cart.php */
@@ -363,19 +439,7 @@ p.product-specs-p{
 /* START css for cart.php */
 
 
-.specs-container{
-    width: max-content;
-    background-color:#707070;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-}
 
-.product-spec{
-color: white;
-font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
 
 
 /* END css for cart.php */
