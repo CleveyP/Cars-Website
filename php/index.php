@@ -10,7 +10,7 @@
     <link href="../css/styles.css" rel="stylesheet">
 </head>
 
-<body>
+<body id="index-body">
     <!--header-->
 
     <?php include("header.php"); ?>

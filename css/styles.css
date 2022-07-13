@@ -65,6 +65,11 @@ header > a:hover{
 main{
     color: white;
 }
+#index-body{
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
 #index-picture{
     width: 100%;
 }
@@ -72,7 +77,9 @@ main{
     margin-top: 50px;
     margin-bottom: 50px;
     width: 100%;
+    height: 350px;
     position: relative;
+    overflow: hidden;
 }
 .slide{
     width: 100%;
