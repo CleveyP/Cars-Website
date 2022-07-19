@@ -183,11 +183,13 @@ main{
 
 #filters-container{
     /* TODO */
-    margin-left: 280px;
+    width: 50%;
+    margin:auto;
+
 }
 
 #filters-form{
-    padding-left: 50px;
+    
 }
 label{
     color: white;

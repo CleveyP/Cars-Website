@@ -34,7 +34,8 @@ $sql = "CREATE TABLE users (
     firstname VARCHAR(30) NOT NULL,                  
     lastname VARCHAR(30) NOT NULL,                  
     h_password CHAR(255) NOT NULL, 
-    email VARCHAR(50)
+    email VARCHAR(50),
+    dark_value VARCHAR(30) DEFAULT '.dark'
     )"; //h_password is user's HASHED password
 if (mysqli_query($conn, $sql)) {
   echo "Table users created successfully<br>";
@@ -43,8 +44,8 @@ if (mysqli_query($conn, $sql)) {
 }
 //insert dummy users into the users table
 $hashed = "'" . password_hash("1234", PASSWORD_DEFAULT) . "'";
-$sql = "INSERT INTO users (firstname, lastname, email, h_password)
-VALUES ('Cleveland', 'Plonsey', 'clevelandplonsey@gmail.com', " . $hashed .  ")";
+$sql = "INSERT INTO users (firstname, lastname, email, h_password, dark_value)
+VALUES ('Cleveland', 'Plonsey', 'clevelandplonsey@gmail.com', " . $hashed .  ", '.bright')";
 
 if (mysqli_query($conn, $sql)) {
   echo "New account created successfully<br>";

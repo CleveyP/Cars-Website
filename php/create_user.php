@@ -47,6 +47,7 @@
         $_SESSION['password'] = $hashed;
         $_SESSION['firstname'] = $firstname;
         $_SESSION['lastname'] = $lastname;
+        $_SESSION['dark_value'] = ".dark";
     } else {
         echo "Error occurred in setting up the account.<br>";
     }
