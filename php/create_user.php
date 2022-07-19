@@ -42,7 +42,7 @@
   VALUES (" . $firstname . "," .  $lastname . "," . $email . ","  . $hashed .  ")";
     if (mysqli_query($conn, $sql)) {
 
-        echo "<h1>Okay," . $_POST['first-name'] . "Your account has been set up successfully!</h1> <br>";
+        echo "<h1>Okay, " . $_POST['first-name'] . ". Your account has been set up successfully!</h1> <br>";
         $_SESSION["isLoggedIn"] = TRUE;
         $_SESSION['email'] = $email;
         $_SESSION['password'] = $hashed;

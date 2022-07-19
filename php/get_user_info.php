@@ -18,7 +18,7 @@ $result = mysqli_query($conn, $sql);
 if ($result) {
     $user_info = mysqli_fetch_assoc($result);
     // set session variables
-    session_start();
+    
     $_SESSION["isLoggedIn"] = TRUE;
     $_SESSION["firstname"] = $user_info['firstname'];
     $_SESSION["lastname"] = $user_info["lastname"];

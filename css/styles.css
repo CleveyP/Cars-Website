@@ -106,10 +106,14 @@ main{
 #left-chevron{
     top: 45%;
     left: 2%;
+    color: black;
+    background-color: #5994A4;
 }
 #right-chevron{
     top: 45%;
     right: 2%;
+    color: black;
+    background-color: #5994A4;
 }
 #products-title{
     text-align: center;
@@ -183,14 +187,12 @@ main{
 
 #filters-container{
     /* TODO */
-    width: 50%;
+    width: 85%;
     margin:auto;
-
-}
-
-#filters-form{
     
 }
+
+
 label{
     color: white;
 }
@@ -255,13 +257,12 @@ footer a{
 
  #login-button, #logout-button{ /* TODO fix logout-button */
     background-color: #013C57;
-    border-width: thin;
-    margin-top: 30px;
+    border: none;
     height: 50px;
-    width: 77%;
+    width: fit-content;
     color: white;
     border-radius: 5px;
-    font-size: 18px;
+    font-size: 15px;
     cursor: pointer;
 }
 #login-button:hover{

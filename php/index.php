@@ -6,21 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Best Automotive</title>
-    <script src="../js/index.js" defer></script>
-    <link href="../css/styles.css" rel="stylesheet">
 </head>
 
 <body id="index-body">
+    <script src="../js/index.js" defer></script>
     <!--header-->
-
     <?php include("header.php"); ?>
+
 
     <!--end header-->
 
     <main>
         <!--main content -->
         <img id="index-picture" src="../pictures/road.jpg" alt="nissan GT">
-        <!-- Carousel --> 
+        <!-- Carousel -->
         <div class="carousel">
             <div class="slide" id="slide-1">
                 <a href="./product.php?id=1" target="_blank" class="item-link">
@@ -110,11 +109,12 @@
                         <p class="car-miles">0 Miles</p>
                         <p class="car-price">$27,000.00</p>
                     </div>
-                </a> 
+                </a>
             </div>
 
-            <button id="left-chevron" class="chevron"><</button>
-            <button id="right-chevron" class="chevron">></button>
+            <button id="left-chevron" class="chevron">
+                < </button>
+                    <button id="right-chevron" class="chevron">></button>
         </div>
         <!-- End Carousel -->
         <!--fiters section -->
