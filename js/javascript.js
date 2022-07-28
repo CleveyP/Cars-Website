@@ -1,5 +1,4 @@
 
-let registerForm = document.getElementById("registration-form");
 let pass1 = document.getElementById("password");
 let pass2 = document.getElementById("confirm-password");
 
@@ -38,13 +37,35 @@ pass2.addEventListener("focusin", displayValidStatus);
 pass2.addEventListener("focusout", hideValidStatus);
 pass2.addEventListener("input", colorStatus);
 
-//check if password and confirm password fields match
-registerForm.addEventListener("submit", function(e){
+function compare(e) {
     let pass1 = document.getElementById("password").value;
     let pass2 = document.getElementById("confirm-password").value;
+    console.log(pass1, pass2);
     if(pass1 != pass2){
         e.preventDefault();
     }
-});
+}
 
+//check if password and confirm password fields match
+let registerForm = document.getElementById("registration-form");
 
+if (registerForm) {
+    registerForm.addEventListener("submit", function(e){
+        let pass1 = document.getElementById("password").value;
+        let pass2 = document.getElementById("confirm-password").value;
+        if(pass1 != pass2){
+            e.preventDefault();
+        }
+    });
+}
+
+let changePassForm = document.getElementById('change-password-form');
+if (changePassForm) {
+    changePassForm.addEventListener("submit", function(e) {
+        let pass1 = document.getElementById("password").value;
+        let pass2 = document.getElementById("confirm-password").value;
+        if(pass1 != pass2){
+            e.preventDefault();
+        }
+    });
+}
