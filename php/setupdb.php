@@ -1,6 +1,7 @@
 <?php // this file should be run before interacting with the site. It sets up the automotive database. TODO: once testng is complete delete the drop db line
 
 include("db_settings.php");
+session_start();
 
 // Create connection to mysqli server (the i in mysqli stands for "improved")
 $conn = mysqli_connect($server, $user, $password);
