@@ -343,6 +343,10 @@ footer a{
     visibility: hidden;
 }
 
+.not-displayed{
+    display: none;
+}
+
 #cart-title{
     color: white;
     text-align: center;
@@ -359,9 +363,6 @@ footer a{
     border: solid thin black;
 }
 
-.product-container{
-    display: flex;
-}
 
 .product-container{
     display: flex;
@@ -380,6 +381,14 @@ footer a{
     width: 500px;
 }
 
+.product-details-container{
+    height: 20%;
+    width: 902px;
+    background-color:#5994A4;
+    color: white;
+    padding: 10px;
+}
+
 .price-mileage{
     display: flex;
     flex-direction: row;
@@ -392,6 +401,12 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
 
 .product-container .product-spec{
     padding-right: 100px;
+}
+
+p.cart-show-details:hover{
+    text-decoration: underline;
+    color:#013C57;
+    cursor:grab;
 }
 
 .product-container form{

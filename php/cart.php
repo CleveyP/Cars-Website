@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Best Automotive Cart</title>
+    <script src="../js/show_details.js" defer></script>
 </head>
 
 <body>
@@ -56,7 +57,11 @@
                                         <input class = 'invisible' type='text' name='item-to-remove' value='" . $values['product_id'] . "'/>
                                     </form>
                                 </div>
-                                <p class='cart-show-details'>Show Details</p>
+                                <p value= '" . $values['product_id'] . "' class='cart-show-details'>Show Details</p>
+                            </div>
+                            <div class='product-details-container not-displayed' id = '" . $values['product_id'] . "'>
+                                <h3>Details...</h3>
+                                <p class='product-details'> Color: ". $values['product_color'] . "</p>
                             </div>";
                     } else {
                         echo "Error Parsing Product Row <br>";
