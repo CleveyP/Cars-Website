@@ -159,8 +159,8 @@
                                 <div class="grid-item">
                                     <img src="../pictures/' . $row['product_model'] . '" alt="">
                                     <p class="car-name">' . $row["product_name"] . '</p>
-                                    <p class="car-miles">' . $row["product_mileage"] . '</p>
-                                    <p class="car-price">' . $row["product_price"] . '</p>
+                                    <p class="car-miles">Miles: ' . $row["product_mileage"] . '</p>
+                                    <p class="car-price">$' . $row["product_price"] . '</p>
                                 </div>
                             </a>';
                             }
