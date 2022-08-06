@@ -49,10 +49,10 @@
     if (mysqli_num_rows($result) > 0) {
         // output data of each row
         while ($row = mysqli_fetch_assoc($result)) {
-            echo "<div class='search-result-container'><img class='search-result-img' src='../pictures/" . $row['product_model'] . ".jpg' alt='picture of car'/><br>
+            echo "<a href='./product.php?id=" . $row['product_id']  . "' target='_blank' class='item-link'><div class='search-result-container'><img class='search-result-img' src='../pictures/" . $row['product_model'] . ".jpg' alt='picture of car'/><br>
     <p class='search-result-info-p'>" . $row['product_name'] . "<br>
      $" . $row['product_price'] . ".00</p>
-    </div><br>";
+    </div></a><br>";
         }
     } else {
         echo "0 search results";
