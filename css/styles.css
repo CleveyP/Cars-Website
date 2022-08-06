@@ -6,9 +6,12 @@
 body{
     margin: 0;
     padding: 0;
-    background-color:  #242424; 
+    background-image: linear-gradient(#242424, #131437); 
 }
-
+ 
+button{
+    background: #5994A4;
+}
 
 /* CSS for header.php */
 header{
@@ -126,7 +129,7 @@ main{
     padding-top: 30px;
     margin-left: 12%;
     padding-bottom: 50px;
-    height: 650px;
+    height: fit-content;
     width: 85%;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -192,6 +195,17 @@ main{
     
 }
 
+#filters-container input{
+    background-color: #5994A4;
+}
+
+#mileage-display{
+    height: 20px;
+    width: 190px;
+    display: block;
+    background-color: #5994A4;
+    color: black;
+}
 
 label{
     color: white;

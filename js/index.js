@@ -39,3 +39,11 @@ prevSlide.addEventListener("click", function() {
         slide.style.transform = `translateX(${100 * (index - curSlide)}%)`;
     });
 });
+
+const mileageSlider = document.getElementById('mileage-slider');
+var mileageDisplay = document.getElementById("mileage-display");
+mileageDisplay.innerHTML = "Less than [use slider] miles"; // Display the default slider value
+// Update the current slider value (each time you drag the slider handle)
+mileageSlider.addEventListener('input', function(e) {
+mileageDisplay.innerHTML = 'Less than ' + e.target.value + ' miles';
+  });

@@ -117,29 +117,25 @@
                     <button id="right-chevron" class="chevron">></button>
         </div>
         <!-- End Carousel -->
-        <!--fiters section -->
+        <!--filters section -->
         <div id="filters-container">
             <form action="index.php" method="POST" id="filters-form">
                 <label for="mileage">Mileage</label>
-                <input type="range" name="mileage">
+                <input id='mileage-slider' type="range" name="mileage" max='400000' min='0' steps='75' >
+                <p id='mileage-display'>Mileage:</p>
 
                 <label for="price">Price</label>
                 <input type="text" name="price">
 
-                <label for="mileage">Make</label>
-                <input type="range" name="make">
-
-                <label for="model">Model</label>
-                <input type="text" name="model">
+                <label for="make">Make</label>
+                <input type="text" name="make">
 
                 <label for="new">New Cars</label>
                 <input type="radio" id="new-radio" name="new/used" value="new">
                 <label for="used">Used Cars</label>
                 <input type="radio" id="used-radio" name="new/used" value="used">
-                <button type="submit">Apply Filters</button>
-                <!--TODO: Implement this filter feature. Either we'll use js or do it on the server side IDK yet -->
-                <button>Reset Filters</button>
-                <!--TODO: implement this button. It should restore the filters to their starting position of clear -->
+
+                <button type="submit" id="apply-filters-button" >Apply Filters</button>
             </form>
         </div>
         <!--end filters section -->
@@ -148,60 +144,95 @@
         <div id="products-container">
             <h2 id="products-title">Offerrings</h2>
 
-            <div class="car-grid">
-                <a href="./product.php?id=3" target="_blank" class="item-link">
-                    <div class="grid-item">
-                        <img src="../pictures/lexus.jpg" alt="">
-                        <p class="car-name">2013 Toyota Lexus</p>
-                        <p class="car-miles">40k Miles</p>
-                        <p class="car-price">$12,000.00</p>
-                    </div>
-                </a>
+            <div class="car-grid" id="car-grid">
+                <?php
+                    if(!empty($_POST)){
+                        $priceFilter = ($_POST['price']!= "") ? (int) $_POST['price'] : 10000000;
+                        $mileageFilter = ($_POST['mileage']!= "") ? (int) $_POST['mileage'] : 10000000;
+                       // $makeFilter = ($_POST['mileage']!= "") ? (int) $_POST['mileage'] : 10000000;
+                    //connect to db
+                    include("db_settings.php");
+                    $conn = mysqli_connect($server, $user, $password, $database);
+                    if($conn){
+                        $sql = 'SELECT * FROM products WHERE product_price <= ' .  $priceFilter . ' AND product_mileage <= ' . $mileageFilter;
+                        $result = mysqli_query( $conn, $sql);
+                        if($result){
+                            while ($row = mysqli_fetch_assoc($result)) {
+                                echo  '<a href="./product.php?id=' . $row["product_id"]  . ' target="_blank" class="item-link">
+                                <div class="grid-item">
+                                    <img src="../pictures/' . $row['product_model'] . '" alt="">
+                                    <p class="car-name">' . $row["product_name"] . '</p>
+                                    <p class="car-miles">' . $row["product_mileage"] . '</p>
+                                    <p class="car-price">' . $row["product_price"] . '</p>
+                                </div>
+                            </a>';
+                            }
+                        }
+                        else{
+                            echo 'error in mysql query ' . $sql;
+                        }
+                    }
+                    else{
+                        echo 'error connectiong to server.';
+                    }
+                }
+                else{
+                    echo 
+                    '<a href="./product.php?id=3" target="_blank" class="item-link">
+                        <div class="grid-item">
+                            <img src="../pictures/lexus.jpg" alt="">
+                            <p class="car-name">2013 Toyota Lexus</p>
+                            <p class="car-miles">40k Miles</p>
+                            <p class="car-price">$12,000.00</p>
+                        </div>
+                    </a>
 
-                <a href="./product.php?id=2" target="_blank" class="item-link">
-                    <div class="grid-item">
-                        <img src="../pictures/forester.jpg" alt="">
-                        <p class="car-name">2015 Suburu Forester</p>
-                        <p class="car-miles">40k Miles</p>
-                        <p class="car-price">$15,000.00</p>
-                    </div>
-                </a>
+                    <a href="./product.php?id=2" target="_blank" class="item-link">
+                        <div class="grid-item">
+                            <img src="../pictures/forester.jpg" alt="">
+                            <p class="car-name">2015 Suburu Forester</p>
+                            <p class="car-miles">40k Miles</p>
+                            <p class="car-price">$15,000.00</p>
+                        </div>
+                    </a>
 
-                <a href="./product.php?id=6" target="_blank" class="item-link">
-                    <div class="grid-item">
-                        <img src="../pictures/Silverado.jpg" alt="">
-                        <p class="car-name">2016 Chevrolet Silverado</p>
-                        <p class="car-miles">32K Miles</p>
-                        <p class="car-price">$43,000.00</p>
-                    </div>
-                </a>
+                    <a href="./product.php?id=6" target="_blank" class="item-link">
+                        <div class="grid-item">
+                            <img src="../pictures/Silverado.jpg" alt="">
+                            <p class="car-name">2016 Chevrolet Silverado</p>
+                            <p class="car-miles">32K Miles</p>
+                            <p class="car-price">$43,000.00</p>
+                        </div>
+                    </a>
 
-                <a href="./product.php?id=1" target="_blank" class="item-link">
-                    <div class="grid-item">
-                        <img src="../pictures/Accord.jpg" alt="">
-                        <p class="car-name">2013 Honda Accord</p>
-                        <p class="car-miles">50k Miles</p>
-                        <p class="car-price">$14,000.00</p>
-                    </div>
-                </a>
+                    <a href="./product.php?id=1" target="_blank" class="item-link">
+                        <div class="grid-item">
+                            <img src="../pictures/Accord.jpg" alt="">
+                            <p class="car-name">2013 Honda Accord</p>
+                            <p class="car-miles">50k Miles</p>
+                            <p class="car-price">$14,000.00</p>
+                        </div>
+                    </a>
 
-                <a href="./product.php?id=4" class="item-link">
-                    <div class="grid-item">
-                        <img src="../pictures/Civic.jpg" alt="">
-                        <p class="car-name">2020 Honda Civic</p>
-                        <p class="car-miles">0 Miles</p>
-                        <p class="car-price">$24,000.00</p>
-                    </div>
-                </a>
+                    <a href="./product.php?id=4" class="item-link">
+                        <div class="grid-item">
+                            <img src="../pictures/Civic.jpg" alt="">
+                            <p class="car-name">2020 Honda Civic</p>
+                            <p class="car-miles">0 Miles</p>
+                            <p class="car-price">$24,000.00</p>
+                        </div>
+                    </a>
 
-                <a href="./product.php?id=5" class="item-link">
-                    <div class="grid-item">
-                        <img src="../pictures/GTR.jpg" alt="">
-                        <p class="car-name">2021 Nissan GTR </p>
-                        <p class="car-miles">0 Miles</p>
-                        <p class="car-price">$120,000.00</p>
-                    </div>
-                </a>
+                    <a href="./product.php?id=5" class="item-link">
+                        <div class="grid-item">
+                            <img src="../pictures/GTR.jpg" alt="">
+                            <p class="car-name">2021 Nissan GTR </p>
+                            <p class="car-miles">0 Miles</p>
+                            <p class="car-price">$120,000.00</p>
+                        </div>
+                    </a>';
+                }
+                ?>
             </div>
         </div>
         <!-- end initial products selection -->
