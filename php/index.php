@@ -127,9 +127,6 @@
                 <label for="price">Price</label>
                 <input type="text" name="price">
 
-                <label for="make">Make</label>
-                <input type="text" name="make">
-
                 <label for="new">New Cars</label>
                 <input type="radio" id="new-radio" name="new/used" value="new">
                 <label for="used">Used Cars</label>
