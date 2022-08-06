@@ -351,6 +351,7 @@ footer a{
     margin-left: 12%; 
     margin-top: 10px;
 }
+/* end register page */
 
 /* START css for Cart.php */
 .invisible {
@@ -458,27 +459,86 @@ p.product-specs-p{
 
 .product-page-img{
     height: 300px;
+    margin: 50px 0 0 50px;
 }
 
 #product-name{
     color: white;
     font-size: larger;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 55px;
 }
 
 #product-page-body{
     background-color: #242424;
 }
 
-
+#product-specs-container{
+    display: flex;
+    background-color:darkcyan;
+    justify-content: space-around;
+    align-items: center;
+}
+#product-specs-h3{
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    margin: 0;
+}
+#add-to-cart-button{
+    background-color: yellow;
+    height: 35px;
+}
 
 /* END css for product.php */
 
+/* start sell.php */
+#sell-h1{
+    color: white;
+    margin-left: 35px;
+}
 
-/* START css for cart.php */
+fieldset{
+    margin: 20px ;
+    background-color: darkslategray;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+#sell-form button{
+    height: 50px;
+    width: 100px;
+    margin-bottom: 10px;
+    margin-left: 100px;    
+}
+
+fieldset input{
+    margin-right: 40px;
+    margin-left: 5px;
+}
+
+#sell-form{
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
 
+/* END sell.php */
 
+/* START logout.php */
+#logout-h2{
+    color: white;
+    margin-left: 90px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
 
+#logout-img{
+    height: 500px;
+    width: 100%;
+}
 
-/* END css for cart.php */
+/* END logout.php */

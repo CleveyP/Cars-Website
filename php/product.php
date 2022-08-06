@@ -32,12 +32,12 @@
             //name of car 
             echo "<h2 id = 'product-name'>" . $product_info['product_name'] . "</h2><br><br>";
             //car specs
-            echo "<h3>Car specs</h3><br><hr><br>";
+            echo "<h3 id='product-specs-h3'>Car specs</h3><br><br>";
 
 
             //START section for all the product specs
             echo "<section id='product-specs-container'>";
-            echo "<p class='product-specs-p' id='product-price'> Price: " . $product_info['product_price'] . "</p><br>";
+            echo "<p class='product-specs-p' id='product-price'> Price: $" . $product_info['product_price'] . "</p><br>";
 
             echo "<p class='product-specs-p'> year: " . $product_info['product_year'] . "</p><br>";
 

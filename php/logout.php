@@ -20,8 +20,8 @@
     }
 
     ?>
-    <h2>You have been logged out successfully!</h2>
-
+    <h2 id='logout-h2'>You have been logged out successfully!</h2>
+    <img id = 'logout-img' src="../pictures/car_driving_off.jpg" alt="car driving off into the distance">
 
     <?php include("footer.php"); ?>
 </body>

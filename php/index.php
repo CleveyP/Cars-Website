@@ -155,7 +155,7 @@
                         $result = mysqli_query( $conn, $sql);
                         if($result){
                             while ($row = mysqli_fetch_assoc($result)) {
-                                echo  '<a href="./product.php?id=' . $row["product_id"]  . ' target="_blank" class="item-link">
+                                echo  '<a href="./product.php?id=' . $row["product_id"]  . '" target="_blank" class="item-link">
                                 <div class="grid-item">
                                     <img src="../pictures/' . $row['product_model'] . '" alt="">
                                     <p class="car-name">' . $row["product_name"] . '</p>
