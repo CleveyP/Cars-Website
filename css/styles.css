@@ -64,6 +64,18 @@ header > a:hover{
     text-decoration: none;
 }
 
+#cart-item-count{
+    height: 12px;
+    width: 12px;
+    background-color: red;
+    color: white;
+    font-size: 10px;
+    text-align: center;
+    position: relative;
+    right: 27%;
+    top: 9%;
+}
+
 /* CSS for the index.php */
 main{
     color: white;

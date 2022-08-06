@@ -26,6 +26,22 @@
         $firstname = trim($firstname, "'");
         echo " <h3 id='username'>" . $firstname . "</h3><a href='profile.php' id='profile-link'><i class='fa-solid fa-user'></i></a>
                 <form method='post' action='logout.php'><button type='submit' id='logout-button'>Logout</button></form>";
+        //display number of items in the cart
+
+        include('db_settings.php');
+        $conn = mysqli_connect($server, $user, $password, $database);
+        //check if connection to to MySql server is good
+        if ($conn) {
+            //create query
+            $id = $_SESSION['user_id'];
+            $id = trim($id, "'"); //might need to trim " as well as '
+            $sql = "SELECT product_id FROM cart WHERE " . $id . " = users_id";
+
+            //launch query
+            $result = mysqli_query($conn, $sql);
+           $numItems = mysqli_num_rows($result);
+           echo "<p id='cart-item-count'>" . $numItems . "</p>";
+        }
     } else {
         echo "<a href='login.php'><button id='register-button'>Log In</button></a>";
     }
