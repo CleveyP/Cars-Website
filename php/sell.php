@@ -1,7 +1,7 @@
 <?php include('header.php'); ?>
 
 <h1 id='sell-h1'>Fill out the form below and get <strong>Cash</strong> for your car in <em>no time!</em></h1>
-<form action="process_sell.php" method='post' id='sell-form'>
+<form action="process_sell.php" method='post' id='sell-form' enctype="multipart/form-data">
     
     <fieldset>
         <label for="make">Car Make </label>
