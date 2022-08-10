@@ -22,7 +22,7 @@
         <!-- Carousel -->
         <div class="carousel">
             <div class="slide" id="slide-1">
-                <a href="./product.php?id=1" target="_blank" class="item-link">
+                <a href="./product.php?id=1" class="item-link">
                     <div class="grid-item">
                         <img src="../pictures/Accord.jpg" alt="">
                         <p class="car-name">2013 Honda Accord</p>
@@ -31,7 +31,7 @@
                     </div>
                 </a>
 
-                <a href="./product.php?id=2" target="_blank" class="item-link">
+                <a href="./product.php?id=2" class="item-link">
                     <div class="grid-item">
                         <img src="../pictures/forester.jpg" alt="">
                         <p class="car-price">$15,000.00</p>
@@ -39,7 +39,7 @@
                         <p class="car-name">2015 Suburu Forester</p>
                     </div>
                 </a>
-                <a href="./product.php?id=3" target="_blank" class="item-link">
+                <a href="./product.php?id=3" class="item-link">
                     <div class="grid-item">
                         <img src="../pictures/lexus.jpg" alt="">
                         <p class="car-name">2013 Toyota Lexus</p>
@@ -48,7 +48,7 @@
                     </div>
                 </a>
 
-                <a href="./product.php?id=6" target="_blank" class="item-link">
+                <a href="./product.php?id=6" class="item-link">
                     <div class="grid-item">
                         <img src="../pictures/Silverado.jpg" alt="">
                         <p class="car-name"> 2016 Chevrolet Silverado</p>
@@ -75,7 +75,7 @@
                         <p class="car-price">$120,000.00</p>
                     </div>
                 </a>
-                <a href="./product.php?id=7" target="_blank" class="item-link">
+                <a href="./product.php?id=7" class="item-link">
                     <div class="grid-item">
                         <img src="../pictures/Forte.jpg" alt="">
                         <p class="car-name">2014 Kia Forte</p>
@@ -84,7 +84,7 @@
                     </div>
                 </a>
 
-                <a href="./product.php?id=8" target="_blank" class="item-link">
+                <a href="./product.php?id=8" class="item-link">
                     <div class="grid-item">
                         <img src="../pictures/Huracan.jpg" alt="">
                         <p class="car-name">2019 Lamborghini Huracan</p>
@@ -93,7 +93,7 @@
                     </div>
                 </a>
 
-                <a href="./product.php?id=9" target="_blank" class="item-link">
+                <a href="./product.php?id=9" class="item-link">
                     <div class="grid-item">
                         <img src="../pictures/Jetta.jpg" alt="">
                         <p class="car-name">2011 Volkswagen Jetta</p>
@@ -119,7 +119,7 @@
         <!-- End Carousel -->
         <!--filters section -->
         <div id="filters-container">
-            <form action="index.php" method="POST" id="filters-form">
+            <form action="?" method="POST" id="filters-form">
                 <label for="mileage">Mileage</label>
                 <input id='mileage-slider' type="range" name="mileage" max='400000' min='0' steps='75' >
                 <p id='mileage-display'>Mileage:</p>
@@ -128,9 +128,9 @@
                 <input type="text" name="price">
 
                 <label for="new">New Cars</label>
-                <input type="radio" id="new-radio" name="new/used" value="new">
+                <input type="radio" id="new-radio" name="new_used" value="new">
                 <label for="used">Used Cars</label>
-                <input type="radio" id="used-radio" name="new/used" value="used">
+                <input type="radio" id="used-radio" name="new_used" value="used">
 
                 <button type="submit" id="apply-filters-button" >Apply Filters</button>
             </form>
@@ -146,16 +146,29 @@
                     if(!empty($_POST)){
                         $priceFilter = ($_POST['price']!= "") ? (int) $_POST['price'] : 10000000;
                         $mileageFilter = ($_POST['mileage']!= "") ? (int) $_POST['mileage'] : 10000000;
-                       // $makeFilter = ($_POST['mileage']!= "") ? (int) $_POST['mileage'] : 10000000;
+                        if (isset($_POST['new_used']) && $_POST['new_used'] === 'new') {
+                            $isNew = 'true';
+                        }
+                        else if (isset($_POST['new_used']) && $_POST['new_used'] === 'used') {
+                            $isNew = 'false';
+                        }
+                        else {
+                            $isNew = null;
+                        }
                     //connect to db
                     include("db_settings.php");
                     $conn = mysqli_connect($server, $user, $password, $database);
                     if($conn){
-                        $sql = 'SELECT * FROM products WHERE product_price <= ' .  $priceFilter . ' AND product_mileage <= ' . $mileageFilter;
+                        if ($isNew != null) {
+                            $sql = 'SELECT * FROM products WHERE product_price <= ' .  $priceFilter . ' AND product_mileage <= ' . $mileageFilter . ' AND product_is_new = ' . $isNew;
+                        } 
+                        else {
+                            $sql = 'SELECT * FROM products WHERE product_price <= ' .  $priceFilter . ' AND product_mileage <= ' . $mileageFilter;
+                        }
                         $result = mysqli_query( $conn, $sql);
                         if($result){
                             while ($row = mysqli_fetch_assoc($result)) {
-                                echo  '<a href="./product.php?id=' . $row["product_id"]  . '" target="_blank" class="item-link">
+                                echo  '<a href="./product.php?id=' . $row["product_id"]  . '"class="item-link">
                                 <div class="grid-item">
                                     <img src="../pictures/' . $row['product_model'] . '" alt="">
                                     <p class="car-name">' . $row["product_name"] . '</p>
@@ -175,7 +188,7 @@
                 }
                 else{
                     echo 
-                    '<a href="./product.php?id=3" target="_blank" class="item-link">
+                    '<a href="./product.php?id=3" class="item-link">
                         <div class="grid-item">
                             <img src="../pictures/lexus.jpg" alt="">
                             <p class="car-name">2013 Toyota Lexus</p>
@@ -184,7 +197,7 @@
                         </div>
                     </a>
 
-                    <a href="./product.php?id=2" target="_blank" class="item-link">
+                    <a href="./product.php?id=2" class="item-link">
                         <div class="grid-item">
                             <img src="../pictures/forester.jpg" alt="">
                             <p class="car-name">2015 Suburu Forester</p>
@@ -193,7 +206,7 @@
                         </div>
                     </a>
 
-                    <a href="./product.php?id=6" target="_blank" class="item-link">
+                    <a href="./product.php?id=6" class="item-link">
                         <div class="grid-item">
                             <img src="../pictures/Silverado.jpg" alt="">
                             <p class="car-name">2016 Chevrolet Silverado</p>
@@ -202,7 +215,7 @@
                         </div>
                     </a>
 
-                    <a href="./product.php?id=1" target="_blank" class="item-link">
+                    <a href="./product.php?id=1" class="item-link">
                         <div class="grid-item">
                             <img src="../pictures/Accord.jpg" alt="">
                             <p class="car-name">2013 Honda Accord</p>
