@@ -145,7 +145,7 @@ if (mysqli_query($conn, $sql)) {
 }
 
 $sql = "INSERT INTO products (product_name, product_make, product_model, product_price, product_mileage, product_stock, product_is_new, product_year, product_color) 
-              VALUES    ('2019 Lamborghini Huracan', 'Lamborghuni', 'Huracan',     326000,    00000,       1,           FALSE,          2019,        'green')";
+              VALUES    ('2019 Lamborghini Huracan', 'Lamborghuni', 'Huracan',     326000,    00000,       1,           TRUE,          2019,        'green')";
 if (mysqli_query($conn, $sql)) {
   echo "inserted 2019 Lambarghini Huracan successfully. <br>";
 } else {
