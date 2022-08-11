@@ -9,15 +9,16 @@
 </head>
 
 <body>
-    <?php include("header.php"); //log the user out
+    <?php 
+    include("header.php"); //log the user out
     if (($_SESSION['isLoggedIn'])) {
-        // $_SESSION["isLoggedIn"] = FALSE;
-        // $_SESSION["firstname"] = null;
-        // $_SESSION["lastname"] = null;
-        // $_SESSION["user_id"] = null;
-        // $_SESSION['email'] = null;
-        // $_SESSION['password'] = null;
-        session_destroy();
+         $_SESSION["isLoggedIn"] = FALSE;
+         $_SESSION["firstname"] = null;
+         $_SESSION["lastname"] = null;
+         $_SESSION["user_id"] = null;
+         $_SESSION['email'] = null;
+        $_SESSION['password'] = null;
+        session_unset();
     }
 
     ?>

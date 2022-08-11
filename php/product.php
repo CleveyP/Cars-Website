@@ -19,16 +19,24 @@
     } else {
         //TODO get product ID from url... examine the line below and check for correctness. We want each product page to be generated via the query param ?id=some_number 
         $productID = $_GET['id'];
-        echo "" . $productID; //   <-------debugging line
 
         $sql = "SELECT * FROM products WHERE product_id =" . $productID;
 
         $result = mysqli_query($conn, $sql);
         if ($result) {
             $product_info = mysqli_fetch_assoc($result);
+            $img_path;
+            
+            if($product_info['product_image_path'] === 'local'){
+                $img_path = $product_info['product_model'] . ".jpg";
+            }
+            else{
+                $img_path = $product_info['product_image_path'];
+            }
+
 
             //picture of car
-            echo "<img class='product-page-img' src='../pictures/" . $product_info['product_model'] . ".jpg' alt='picture of car'/><br><br>";
+            echo "<img class='product-page-img' src='../pictures/" . $img_path . "' alt='picture of car'/><br><br>";
             //name of car 
             echo "<h2 id = 'product-name'>" . $product_info['product_name'] . "</h2><br><br>";
             //car specs
@@ -45,7 +53,9 @@
 
             echo "<p class='product-specs-p'> Color: " . $product_info['product_color'] . "</p><br>";
             if (isset($_SESSION['isLoggedIn'])) {
+                if($_SESSION['isLoggedIn']){
                 echo "<form action='add_product_to_cart.php' method='post'><button name='add-to-cart-button' value='" . $productID . "' id='add-to-cart-button' type='submit'>Add to Cart</button></form><br><br>";
+                }
             }
             echo "</section>";
             //END products specs section

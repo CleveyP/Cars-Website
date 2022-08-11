@@ -168,9 +168,17 @@
                         $result = mysqli_query( $conn, $sql);
                         if($result){
                             while ($row = mysqli_fetch_assoc($result)) {
+                                $img_path;
+            
+                                if($row['product_image_path'] === 'local'){
+                                    $img_path = $row['product_model'] . ".jpg";
+                                }
+                                else{
+                                    $img_path = $row['product_image_path'];
+                                }
                                 echo  '<a href="./product.php?id=' . $row["product_id"]  . '"class="item-link">
                                 <div class="grid-item">
-                                    <img src="../pictures/' . $row['product_model'] . '" alt="">
+                                    <img  src="../pictures/' . $img_path . '" alt="">
                                     <p class="car-name">' . $row["product_name"] . '</p>
                                     <p class="car-miles">Miles: ' . $row["product_mileage"] . '</p>
                                     <p class="car-price">$' . $row["product_price"] . '</p>

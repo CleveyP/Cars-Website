@@ -38,11 +38,19 @@
                     $product_values = mysqli_query($conn, $sql);
                     if ($product_values) {
                         $values = mysqli_fetch_assoc($product_values);
-                        // (product_name, product_make, product_model, product_price, product_mileage, product_stock, product_is_new, product_year, product_color) 
+                      
                         $is_new = $values['product_is_new'] ? "New" : "Used";
+
+                        if($values['product_image_path'] === 'local'){
+                            $img_path = $values['product_model'] . ".jpg";
+                        }
+                        else{
+                            $img_path = $values['product_image_path'];
+                        }
+            
                         echo
                             "<div class='product-container'>
-                                <img class='cart-product-img' src='../pictures/" . $values['product_model'] . ".jpg' alt='picture of car'/>
+                                <img class='cart-product-img' src='../pictures/" . $img_path . "' alt='picture of car'/>
 
                                 <div class='specs-container'>
                                     <p class='cart-product-name'>" . $is_new . " " . $values['product_name'] . "</p>
