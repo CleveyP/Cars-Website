@@ -77,7 +77,8 @@ $sql = "CREATE TABLE products (
   product_stock INT(10),
   product_is_new BOOLEAN,
   product_year INT(4),
-  product_color VARCHAR(30)
+  product_color VARCHAR(30),
+  product_image_path VARCHAR(60) DEFAULT 'local'
   )";
 
 if (mysqli_query($conn, $sql)) {
