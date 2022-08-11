@@ -24,10 +24,10 @@
 
             <div class="register-content">
                 <label for="first-name">First Name</label>
-                <input type="text" name="first-name" id="first-name" placeholder="Enter Name" required>
+                <input type="text" name="firstName" id="first-name" placeholder="Enter Name" required>
 
                 <label for="last-name">Last Name</label>
-                <input type="text" name="last-name" id="last-name" placeholder="Enter Last Name" required>
+                <input type="text" name="lastName" id="last-name" placeholder="Enter Last Name" required>
 
                 <label for="email">Email</label>
                 <input type="email" name="email" id="email" placeholder="Enter Email" required>
@@ -36,7 +36,7 @@
                 <input type="password" name="password" id="password" placeholder="Enter Password" required>
 
                 <label for="confirm-password">Confirm Password</label>
-                <input type="password" name="confirm-password" id="confirm-password" placeholder="Confirm Password" required>
+                <input type="password" name="confirmPassword" id="confirm-password" placeholder="Confirm Password" required>
                 <!--TODO enforce that the confirm pass is the same as the first entered password via js -->
             </div>
             <div class="register-submit">

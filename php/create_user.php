@@ -29,20 +29,20 @@
     }
 
     //pull in the user's entered account credentials from the register.php page's form element
-    $firstname = "'" . $_POST["first-name"] . "'";
-    $lastname  = "'" .  $_POST["last-name"] . "'";
-    $password  = "'" . $_POST["password"] . "'";
+    $firstname = "'" . $_POST["firstName"] . "'";
+    $lastname  = "'" .  $_POST["lastName"] . "'";
+    $password  = $_POST["password"];
     $email  = "'" . $_POST["email"] . "'";
 
     //hash the user's password 
     $hashed = "'" . password_hash($password, PASSWORD_DEFAULT) . "'";
 
     //insert the new user account into the users table
-    $sql = "INSERT INTO users (firstname, lastname, email, h_password)
-  VALUES (" . $firstname . "," .  $lastname . "," . $email . ","  . $hashed .  ")";
+    $sql = "INSERT INTO users (firstname, lastname, email, h_password, dark_value)
+    VALUES (" . $firstname . "," .  $lastname . "," . $email . ","  . $hashed .  ", '.bright')";
     if (mysqli_query($conn, $sql)) {
 
-        echo "<h1>Okay, " . $_POST['first-name'] . ". Your account has been set up successfully!</h1> <br>";
+        echo "<h1>Okay, " . $_POST['firstName'] . ". Your account has been set up successfully!</h1> <br>";
         $_SESSION["isLoggedIn"] = TRUE;
         $_SESSION['email'] = $email;
         $_SESSION['password'] = $hashed;

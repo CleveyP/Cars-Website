@@ -34,7 +34,7 @@ $sql = "CREATE TABLE users (
     id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
     firstname VARCHAR(30) NOT NULL,                  
     lastname VARCHAR(30) NOT NULL,                  
-    h_password CHAR(255) NOT NULL, 
+    h_password VARCHAR(255) NOT NULL, 
     email VARCHAR(50),
     dark_value VARCHAR(30) DEFAULT '.dark'
     )"; //h_password is user's HASHED password
