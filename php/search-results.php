@@ -42,14 +42,22 @@
         echo "Error connecting to mysql server!<br>";
     }
     $search_term = "'%" . $_POST["search-bar"] . "%'";
-    $sql = "SELECT product_id, product_name, product_price, product_model FROM products WHERE product_name LIKE $search_term";
+    $sql = "SELECT product_id, product_name, product_price, product_model, product_image_path FROM products WHERE product_name LIKE $search_term";
 
     $result = mysqli_query($conn, $sql);
 
     if (mysqli_num_rows($result) > 0) {
         // output data of each row
         while ($row = mysqli_fetch_assoc($result)) {
-            echo "<a href='./product.php?id=" . $row['product_id']  . "' target='_blank' class='item-link'><div class='search-result-container'><img class='search-result-img' src='../pictures/" . $row['product_model'] . ".jpg' alt='picture of car'/><br>
+            $img_path;
+            
+            if($row['product_image_path'] === 'local'){
+                $img_path = $row['product_model'] . ".jpg";
+            }
+            else{
+                $img_path = $row['product_image_path'];
+            }
+            echo "<a href='./product.php?id=" . $row['product_id']  . "' target='_blank' class='item-link'><div class='search-result-container'><img class='search-result-img' src='../pictures/" . $img_path . "' alt='picture of car'/><br>
     <p class='search-result-info-p'>" . $row['product_name'] . "<br>
      $" . $row['product_price'] . ".00</p>
     </div></a><br>";
