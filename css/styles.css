@@ -6,7 +6,8 @@
 body{
     margin: 0;
     padding: 0;
-    background-image: linear-gradient(#242424, #131437); 
+    /* background-image: linear-gradient(#242424, #131437);  */
+    background-color: #242424;
 }
  
 button{

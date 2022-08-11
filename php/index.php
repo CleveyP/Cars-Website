@@ -253,14 +253,7 @@
                 ?>
             </div>
         </div>
-        <!-- end initial products selection -->
-
-        <!--make this section like the cars.com site's section with drop down menus instead of links -->
-        <h2 id="popular-searches-header">Popular Searches</h2>
-        <div id="popular-searches">
-            <a href="">Popular New Cars For Sale</a>
-            <a href="">Popular Used Cars For Sale</a>
-        </div>
+        <!-- end initial products selection --> 
     </main>
 
     <?php include("footer.php"); ?>
