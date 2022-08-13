@@ -28,12 +28,25 @@
         echo "Error connecting to mysql server.";
     }
 
+   
+
+
     //pull in the user's entered account credentials from the register.php page's form element
     $firstname = "'" . $_POST["firstName"] . "'";
     $lastname  = "'" .  $_POST["lastName"] . "'";
     $password  = $_POST["password"];
     $email  = "'" . $_POST["email"] . "'";
 
+
+     //check to make sure email is available (not in db already)
+     $sql = "SELECT * FROM users WHERE email = " . $email;
+
+     $result = mysqli_query($conn, $sql);
+     if(mysqli_num_rows(($result)) !=0){ //if the email is already in the db
+        echo "<h2 id='email-already-exists'>The entered email is already associated with an existing account.</h2> <br> 
+        <a href='./login.php' id='return-login-link'>Click here to return to log in page.</a>"; //tell the user that the email already is associated with an existing account.
+     }
+     else{
     //hash the user's password 
     $hashed = "'" . password_hash($password, PASSWORD_DEFAULT) . "'";
 
@@ -61,6 +74,7 @@
     } else {
         echo "Error getting user id from user table";
     }
+}
     include("footer.php"); ?>
 </body>
 
