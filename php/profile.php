@@ -2,11 +2,11 @@
     <?php
     include('header.php');
 
-    $firstname = $_SESSION['firstname'];
-    $lastname = $_SESSION['lastname'];
+    $firstname = trim($_SESSION['firstname']);
+    $lastname = trim($_SESSION['lastname']);
 
     $darkValue = $_SESSION['dark_value'];
-    echo "<h2 id='username'>" . $firstname . " " . $lastname . "'s Profile<br>
+    echo "<h2 id='username'>" . substr($firstname, 1, -1) . " " . $lastname . "'s Profile<br>
     <section id='edit-profile'>
         <a href='change_password_form.php' id='change-password-a'>Change password</a><br>
         <a href='change_username_form.php' id='change-username-a'>Change Username</a><br>
