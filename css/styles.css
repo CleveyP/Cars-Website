@@ -559,3 +559,16 @@ fieldset input{
 }
 
 /* END logout.php */
+
+/* START process_sell.php */
+
+#successful-upload-message{
+    color: white;
+    text-align: center;
+}
+
+#successful-upload-img{
+    margin-left: 24%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
