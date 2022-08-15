@@ -572,3 +572,41 @@ fieldset input{
     margin-top: 25px;
     margin-bottom: 25px;
 }
+
+/* END process_sell.php */
+
+/*START profile.php */
+
+
+#username{
+    text-align: center;
+    font-size: 40px;
+    color: white;
+}
+
+.change-user-a{
+    font-size: 24px;
+    color: white;
+}
+
+#change-user-credentials{
+    color: red;
+    font-size: large;
+    text-decoration: solid;
+    margin: none;
+}
+
+#edit-profile{
+    margin-left: 30px;
+    padding-left: 100px;
+    padding-right: 100px;
+    display: flex;
+    flex-direction: column;
+    height: 20%;
+    justify-content: space-evenly;
+    margin-bottom: 18%;
+    border: dotted white 3px;
+    width:fit-content;
+}
+
+/*END profile.php */
